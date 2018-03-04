@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PlrsNoEnoughHitPointsToReset>It has no enough hit points to be actived!</PlrsNoEnoughHitPointsToReset>
+  <PlrsForceResetLabel>force active</PlrsForceResetLabel>
+  <PlrsForceResetDESC>You can pay 20 hit points to reactive the shield state.</PlrsForceResetDESC>
+</LanguageData>
