@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!--==================== Base Weapon Template =========================-->
+
+	<ThingDef Abstract="True" Name="JamableBullet" ParentName="BaseBullet">
+    <thingClass>AdeptusMechanicus.BulletCP</thingClass>
+ </ThingDef>
+
+<!--==================== Base Weapon Template =========================-->
 	
 	<ThingDef Abstract="True" Name="OGBaseWeapon">
 		<thingClass>ThingWithComps</thingClass>
@@ -82,6 +88,20 @@
     <weaponTags>
       <li>Gun</li>
     </weaponTags>
+  </ThingDef>
+  
+<!--==================== Mod - Base Jamable Gun Weapon Template =========================-->
+  
+ 	<ThingDef Name="OGBaseJamableGun" ParentName="OGBaseGun" Abstract="True">
+		<thingClass>AdeptusMechanicus.ThingDef_GunCP</thingClass>
+	</ThingDef>
+  
+	<ThingDef Name="OGBaseMakeableGunJamable" ParentName="OGBaseMakeableGun" Abstract="True">
+	<thingClass>AdeptusMechanicus.ThingDef_GunCP</thingClass>
+  </ThingDef>
+  
+	<ThingDef Name="OGBaseHumanMakeableGunJamable" ParentName="OGBaseHumanMakeableGun" Abstract="True">
+	<thingClass>AdeptusMechanicus.ThingDef_GunCP</thingClass>
   </ThingDef>
 	
 	<!--==================== Mod - Base Melee Weapon Template =========================-->

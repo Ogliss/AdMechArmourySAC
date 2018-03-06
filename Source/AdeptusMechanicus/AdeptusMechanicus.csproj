@@ -31,19 +31,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\JecsTools-master\Assemblies\0Harmony.dll</HintPath>
+      <HintPath>_DLLs\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>_DLLs\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>_DLLs\UnityEngine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvShieldBelt.cs" />
+    <Compile Include="BulletCP.cs" />
     <Compile Include="CompOversizedWeapon.cs" />
     <Compile Include="CompProperties_OversizedWeapon.cs" />
     <Compile Include="Gizmo_AdvShieldBeltStatus.cs" />
@@ -55,17 +59,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Overheatable.cs" />
     <Compile Include="StatDefOf_CP.cs" />
+    <Compile Include="StatDrawEntry.cs" />
     <Compile Include="StatPart_Overheatable.cs" />
     <Compile Include="StatPart_Reliability.cs" />
     <Compile Include="StatWorker_Reliability.cs" />
     <Compile Include="ThingDef_BulletEffect.cs" />
+    <Compile Include="ThingDef_GunCP.cs" />
     <Compile Include="ThingDef_GunOGOverheat.cs" />
-    <Compile Include="ThingDef_GunOGJam.cs" />
     <Compile Include="ThingDef_LaserProjectile.cs" />
-    <Compile Include="VerbPropertiesOGJam.cs" />
+    <Compile Include="VerbPropertiesCP.cs" />
     <Compile Include="VerbPropertiesOGOverheat.cs" />
-    <Compile Include="Verb_LaunchProjectileOGJam.cs" />
-    <Compile Include="Verb_ShootOGJam.cs" />
+    <Compile Include="Verb_LaunchProjectileCP.cs" />
+    <Compile Include="Verb_ShootCP.cs" />
     <Compile Include="Verb_ShootGetsHot.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

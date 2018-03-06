@@ -1777,7 +1777,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 <!-- ====================== AssaultCannon ===================== -->
 
   
- <ThingDef ParentName="BaseBullet">
+ <ThingDef ParentName="JamableBullet">
 	<defName>OGI_Bullet_AssaultCannon</defName>
     <label>Assaultcannon bullet</label>
     <graphicData>
@@ -1791,7 +1791,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     </projectile>
  </ThingDef>
   
- <ThingDef ParentName="OGBaseMakeableGun">
+ <ThingDef ParentName="OGBaseMakeableGunJamable">
     <defName>OGI_Gun_AssaultCannon</defName>
     <label>Assaultcannon</label>
     <description>The Assault Cannon is a ballistic six-barreled, self-loading rotary Autocannon, effective against infantry targets and light vehicles at close to medium range. It is a medium calibre rotary Autocannon, with its 6 barrels cycled by an electric motor past a single chamber. The Assault Cannon was developed after the end of the Horus Heresy in the early 31st Millennium as a replacement for the Autocannon. Introduced during the Mark IIIA phase of Indomitus Pattern Terminator Armour development, this weapon is the standard alternative to the Heavy Flamer as a Terminator Squad's special ranged weapon. Its design has changed little in 10 Terran millennia, retaining the distinctively long, cylindrical, rotating barrels. Although it lacks the range of the Autocannon and many other Imperial heavy weapons, the Assault Cannon is a fearsome weapon when used at the close range role from which it was intended to be fired.</description>
@@ -1840,9 +1840,9 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<MoveSpeed>-0.25</MoveSpeed>
     </equippedStatOffsets>
     <verbs>
-		<li Class="AdeptusMechanicus.VerbPropertiesOGJam">
-			<verbClass>AdeptusMechanicus.Verb_ShootOGJam</verbClass>
-			<reliability>ST</reliability>
+		<li Class="AdeptusMechanicus.VerbPropertiesCP">
+			<verbClass>AdeptusMechanicus.Verb_ShootCP</verbClass>
+			<reliability>UR</reliability>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_AssaultCannon</defaultProjectile>
 			<warmupTime>3</warmupTime>
