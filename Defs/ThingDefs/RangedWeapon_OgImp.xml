@@ -1008,7 +1008,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 <!-- ====================== Plasma Pistol ===================== -->
 
 
- <ThingDef ParentName="BaseBullet">
+ <ThingDef ParentName="OverheatBullet">
 	<defName>OGI_Bullet_PlasmaPistol</defName>
     <label>Plasma Bolt</label>
     <graphicData>
@@ -1026,7 +1026,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 	</projectile>
  </ThingDef>
 
- <ThingDef ParentName="OGBaseMakeableGun">
+ <ThingDef ParentName="OGBaseMakeableGunGetsHot">
 	<defName>OGI_Gun_PlasmaPistol</defName>
     <label>Plasma Pistol</label>
     <description>The Plasma Pistol is the smallest variant in the Plasma Weapons family. Each shot from a plasma pistol contains all the destructive fury of a larger Plasma Gun, although with a reduced range and rate of fire. The Traitor Legions have long made use of larger plasma weapons containing hydrogen fuel in a higher quantum state, making them both more powerful and more dangerous to wield. The Plasma Pistol is most commonly carried by officers of both the Space Marines and the Imperial Guard. Aside from individual Imperial officers, some specialized assault troops such as Assault Marines are also sometimes armed with Plasma Pistols.</description>
@@ -1064,8 +1064,9 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 		<li>OGIRanged</li>
 	</tradeTags>
     <verbs>
-		<li>
-			<verbClass>AdeptusMechanicus.Verb_ShootGetsHot</verbClass>
+		<li Class="AdeptusMechanicus.VerbPropertiesOH">
+			<verbClass>AdeptusMechanicus.Verb_ShootOH</verbClass>
+			<overheat>UR</overheat>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_PlasmaPistol</defaultProjectile>
 			<warmupTime>1</warmupTime>
@@ -1105,7 +1106,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 <!-- ====================== Plasma Gun ===================== -->
 
 
- <ThingDef ParentName="BaseBullet">
+ <ThingDef ParentName="OverheatBullet">
 	<defName>OGI_Bullet_PlasmaGun</defName>
     <label>Plasma Bolt</label>
     <graphicData>
@@ -1123,7 +1124,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 	</projectile>
  </ThingDef>
 
- <ThingDef ParentName="OGBaseMakeableGun">
+ <ThingDef ParentName="OGBaseMakeableGunGetsHot">
 	<defName>OGI_Gun_PlasmaGun</defName>
     <label>Plasma Gun</label>
     <description>The Plasma Gun is a rifle-sized Plasma Weapon common to many of the armed forces of the Imperium of Man. It is classified as a special weapon and is carried by a variety of Imperial infantry, including Space Marines, Imperial Guardsmen and Storm Troopers. Like other infantry-carried plasma weapons, Imperial Plasma Guns are more powerful than plasma weapons used by xenos races but far more unstable as they have a chance to malfunction and even explode, wounding or even killing the wielder.
@@ -1163,8 +1164,9 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<li>OGIRanged</li>
 	</tradeTags>
     <verbs>
-		<li>
-			<verbClass>AdeptusMechanicus.Verb_ShootGetsHot</verbClass>
+		<li Class="AdeptusMechanicus.VerbPropertiesOH">
+			<verbClass>AdeptusMechanicus.Verb_ShootOH</verbClass>
+			<overheat>UR</overheat>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_PlasmaGun</defaultProjectile>
 			<warmupTime>1</warmupTime>
@@ -1203,7 +1205,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 <!-- ====================== Plasma Cannon ===================== -->
 
   
- <ThingDef ParentName="BaseBullet">
+ <ThingDef ParentName="OverheatBullet">
 	<defName>OGI_Bullet_PlasmaCannon</defName>
     <label>Plasma Bolt</label>
     <graphicData>
@@ -1221,7 +1223,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     </projectile>
  </ThingDef>
   
- <ThingDef ParentName="OGBaseMakeableGun">
+ <ThingDef ParentName="OGBaseMakeableGunGetsHot">
     <defName>OGI_Gun_PlasmaCannon</defName>
     <label>Plasma Cannon</label>
     <description>The Plasma Cannon, also sometimes called the Heavy Plasma Gun, is an Imperial heavy weapon that relies on plasma technology to deliver lethal blasts of superheated matter to the target. Plasma Weapons work by using hydrogen fuel suspended in a cryogenic state, in either fuel flasks or backpack containers. As the fuel is fed into the miniature fusion core inside the weapon, the hydrogen energises into plasma which is held in the core of the weapon by powerful electromagnetic containment fields. When fired, the fields dilate open and the plasma is ejected via a linear magnetic accelerator as a bolt of superheated matter akin to a solar flare in appearance and temperature. This bolt will explode on impact and can generate the destructive heat of a small sun. For this reason, Plasma Weapons are sometimes called “Sun Guns” by the common Imperial population.</description>
@@ -1269,8 +1271,9 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<MoveSpeed>-0.25</MoveSpeed>
     </equippedStatOffsets>
     <verbs>
-		<li>
-			<verbClass>AdeptusMechanicus.Verb_ShootGetsHot</verbClass>
+		<li Class="AdeptusMechanicus.VerbPropertiesOH">
+			<verbClass>AdeptusMechanicus.Verb_ShootOH</verbClass>
+			<overheat>UR</overheat>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_PlasmaCannon</defaultProjectile>
 			<warmupTime>4</warmupTime>

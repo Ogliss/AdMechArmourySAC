@@ -4,7 +4,11 @@
 
 	<ThingDef Abstract="True" Name="JamableBullet" ParentName="BaseBullet">
     <thingClass>AdeptusMechanicus.BulletCP</thingClass>
- </ThingDef>
+	</ThingDef>
+ 
+	<ThingDef Abstract="True" Name="OverheatBullet" ParentName="BaseBullet">
+    <thingClass>AdeptusMechanicus.BulletOH</thingClass>
+	</ThingDef>
 
 <!--==================== Base Weapon Template =========================-->
 	
@@ -92,7 +96,7 @@
   
 <!--==================== Mod - Base Jamable Gun Weapon Template =========================-->
   
- 	<ThingDef Name="OGBaseJamableGun" ParentName="OGBaseGun" Abstract="True">
+ 	<ThingDef Name="OGBaseGunJamable" ParentName="OGBaseGun" Abstract="True">
 		<thingClass>AdeptusMechanicus.ThingDef_GunCP</thingClass>
 	</ThingDef>
   
@@ -102,6 +106,20 @@
   
 	<ThingDef Name="OGBaseHumanMakeableGunJamable" ParentName="OGBaseHumanMakeableGun" Abstract="True">
 	<thingClass>AdeptusMechanicus.ThingDef_GunCP</thingClass>
+   </ThingDef>
+   
+<!--==================== Mod - Base Overheat Gun Weapon Template =========================-->
+  
+ 	<ThingDef Name="OGBaseGunGetsHot" ParentName="OGBaseGun" Abstract="True">
+		<thingClass>AdeptusMechanicus.ThingDef_GunOH</thingClass>
+	</ThingDef>
+  
+	<ThingDef Name="OGBaseMakeableGunGetsHot" ParentName="OGBaseMakeableGun" Abstract="True">
+	<thingClass>AdeptusMechanicus.ThingDef_GunOH</thingClass>
+  </ThingDef>
+  
+	<ThingDef Name="OGBaseHumanMakeableGunGetsHot" ParentName="OGBaseHumanMakeableGun" Abstract="True">
+	<thingClass>AdeptusMechanicus.ThingDef_GunOH</thingClass>
   </ThingDef>
 	
 	<!--==================== Mod - Base Melee Weapon Template =========================-->

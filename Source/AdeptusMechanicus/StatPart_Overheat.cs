@@ -3,18 +3,18 @@ using System;
 
 namespace AdeptusMechanicus
 {
-    class StatPart_Reliability : StatPart
+    class StatPart_Overheat : StatPart
     {
         public override void TransformValue(StatRequest req, ref float val)
         {
-            if (req.HasThing && (req.Thing.GetType() == Type.GetType("AdeptusMechanicus.ThingDef_GunCP")))
+            if (req.HasThing && (req.Thing.GetType() == Type.GetType("AdeptusMechanicus.ThingDef_GunOH")))
             {
-                ThingDef_GunCP gun = (ThingDef_GunCP)req.Thing;
-                string reliabilityString;
+                ThingDef_GunOH gun = (ThingDef_GunOH)req.Thing;
+                string overheatString;
                 float jamsOn;
-                GetReliability(gun, out reliabilityString, out jamsOn);
-                this.parentStat.formatString = reliabilityString;
-                switch (reliabilityString)
+                GetOverheat(gun, out overheatString, out jamsOn);
+                this.parentStat.formatString = overheatString;
+                switch (overheatString)
                 {
                     case "Unreliable":
                         this.parentStat.description = "This gun is unreliable in combat and can jam easily.";
@@ -67,7 +67,7 @@ namespace AdeptusMechanicus
             return result;
         }
 
-        public static void GetReliability(ThingDef_GunCP gun, out string rel, out float jamsOn)
+        public static void GetOverheat(ThingDef_GunOH gun, out string rel, out float jamsOn)
         {
             rel = string.Empty;
             jamsOn = JamChance(gun);
@@ -86,18 +86,18 @@ namespace AdeptusMechanicus
         /// </summary>
         /// <param name="gun">The gun object</param>
         /// <returns>floating point number representing the jam chance</returns>
-        public static float JamChance(ThingDef_GunCP gun)
+        public static float JamChance(ThingDef_GunOH gun)
         {
             float result = 0f;
-            switch (gun.reliability)
+            switch (gun.overheat)
             {
-                case Reliability.UR:
+                case Overheat.UR:
                     result = 80f;
                     break;
-                case Reliability.ST:
+                case Overheat.ST:
                     result = 55f;
                     break;
-                case Reliability.VR:
+                case Overheat.VR:
                     result = 30f;
                     break;
                 default:
@@ -113,7 +113,7 @@ namespace AdeptusMechanicus
         /// Returns a factor to scale quality. If the ownerEquipment doesn't have a CompQuality it will return a factor of 0.
         /// </summary>
         /// <returns>Quality-based scale factor</returns>
-        public static int GetQualityFactor(ThingDef_GunCP gun)
+        public static int GetQualityFactor(ThingDef_GunOH gun)
         {
             QualityCategory qc;
             if (gun.TryGetQuality(out qc))
