@@ -185,6 +185,39 @@
 		<label>Mechanicus Melee Weapons</label>
 		<parent>OGAMWeapons</parent>
 	</ThingCategoryDef>
+		
+	<!--========================= Adeptus Mechanicus - Tau Gear Catagories ==========================-->
+	<!--========================= Adeptus Mechanicus - Tau Armour Catagories ==========================-->
 	
+	<ThingCategoryDef>					<!-- DO NOT CHANGE DEF NAME -->
+		<defName>OGTArmour</defName>
+		<label>Tau Armour</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
+	
+	<!--========================= Adeptus Mechanicus - Tau Gear Catagories ==========================-->
+	
+	<ThingCategoryDef>					<!-- DO NOT CHANGE DEF NAME -->
+		<defName>OGTHeadgear</defName>
+		<label>Tau Headgear</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
+	  		
+	<!--========================= Adeptus Mechanicus - Ork Gear Catagories ==========================-->
+	<!--========================= Adeptus Mechanicus - Ork Armour Catagories ==========================-->
+	
+	<ThingCategoryDef>					<!-- DO NOT CHANGE DEF NAME -->
+		<defName>OGOArmour</defName>
+		<label>Ork Armour</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
+	
+	<!--========================= Adeptus Mechanicus - Ork Gear Catagories ==========================-->
+	
+	<ThingCategoryDef>					<!-- DO NOT CHANGE DEF NAME -->
+		<defName>OGOHeadgear</defName>
+		<label>Ork Headgear</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
 	  
 </Defs>

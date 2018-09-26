@@ -1,7 +1,73 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-
+	<!--==================== Ork  - Crude Choppa =========================-->
+	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
+		<defName>Melee_CrudeChoppa</defName>
+		<label>Ork Crude Choppa</label>
+		<description>Choppas are a general term given to any Ork close combat weapon, typically heavy swords and axes. Slugga Boyz are always armed with a Slugga and Choppa, at least until they save up enough teef to buy something better, like a Shoota. There is little finesse to a Choppa, as most are little more than sharpened pieces of scrap metal which have been roughly shaped into something resembling a sword or axe. There are, however, more advanced choppas, often taking the form of a crude Chainsword.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Choppa</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<soundInteract>Interact_Revolver</soundInteract>
+		<statBases>
+			<WorkToMake>250</WorkToMake>
+			<Mass>2.5</Mass>
+			<MarketValue>225</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<PsychicSensitivity>-0.05</PsychicSensitivity>
+		</equippedStatOffsets>
+		<equippedAngleOffset>-25</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.0</cooldownTime>
+			</li>
+			<li>
+				<label>blade</label>
+				<capacities>
+					<li>Cut</li>
+					<li>Stab</li>
+				</capacities>
+				<power>28</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+		<costStuffCount>75</costStuffCount>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<recipeMaker>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+				<li>CraftingSpot</li>
+			</recipeUsers>
+			<researchPrerequisite>OrkTekBase</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>10</Steel>
+		</costList>
+		<weaponTags>
+			<li>OCrudeChoppa</li>
+			<li>OBrutalityMelee</li>
+		</weaponTags>
+		<thingCategories>
+			<li>OGOMelee</li>
+		</thingCategories>
+		<tradeTags>
+			<li>OGOMelee</li>
+		</tradeTags>
+	 </ThingDef>
+	 
+	<!--==================== Ork  - Choppa =========================-->
 	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
 		<defName>Melee_Choppa</defName>
 		<label>Ork Choppa</label>
@@ -11,13 +77,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>75</costStuffCount>
 		<statBases>
 			<WorkToMake>500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
-			<MarketValue>750</MarketValue>
+			<MarketValue>550</MarketValue>
 		</statBases>
 		<equippedStatOffsets>
 			<PsychicSensitivity>-0.05</PsychicSensitivity>
@@ -33,6 +98,7 @@
 				<li>FueledSmithy</li>
 				<li>CraftingSpot</li>
 			</recipeUsers>
+			<researchPrerequisite>OrkishBrutality</researchPrerequisite>
 		</recipeMaker>
 		<tools>
 			<li>
@@ -55,10 +121,11 @@
 			</li>
 		</tools>
 		<costList>
-			<Component>5</Component>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>OChoppa</li>
+			<li>OBrutalityMelee</li>
 		</weaponTags>
 		<thingCategories>
 			<li>OGOMelee</li>
@@ -69,7 +136,6 @@
 	 </ThingDef>
 	 
 	<!--==================== Ork  - Big Choppa =========================-->
-
 	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
 		<defName>Melee_BigChoppa</defName>
 		<label>Ork Big Choppa</label>
@@ -79,12 +145,10 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
-		<costStuffCount>150</costStuffCount>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<statBases>
 			<WorkToMake>1000</WorkToMake>
 			<Mass>4.5</Mass>
-			<Weapon_Bulk>3.25</Weapon_Bulk>
 			<MarketValue>1500</MarketValue>
 		</statBases>
 		<equippedStatOffsets>
@@ -101,7 +165,14 @@
 				<li>FueledSmithy</li>
 				<li>CraftingSpot</li>
 			</recipeUsers>
+		<researchPrerequisite>OrkishExtremeBrutality</researchPrerequisite>
 		</recipeMaker>
+		<costStuffCount>150</costStuffCount>
+		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Plasteel>2</Plasteel>
+			<Steel>10</Steel>
+		</costList>
 		<tools>
 			<li>
 				<label>handle</label>
@@ -122,11 +193,9 @@
 				<cooldownTime>1.8</cooldownTime>
 			</li>
 		</tools>
-		<costList>
-			<Component>5</Component>
-		</costList>
 		<weaponTags>
 			<li>OBigChoppa</li>
+			<li>OEBrutalityMelee</li>
 		</weaponTags>
 		<thingCategories>
 			<li>OGOMelee</li>
@@ -136,9 +205,7 @@
 		</tradeTags>
 	 </ThingDef>
 	 
-	 
 	<!--==================== Ork  - Power Klaw =========================-->
-
 	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
 		<defName>Melee_PowerKlaw</defName>
 		<label>Ork Power Klaw</label>
@@ -148,14 +215,21 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>400</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>750</MarketValue>
 		</statBases>
+	<recipeMaker>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+		<researchPrerequisite>OrkishPowerField</researchPrerequisite>
+	</recipeMaker>
 		<equippedAngleOffset>-25</equippedAngleOffset>
 		<stuffCategories>
 			<li>Metallic</li>
@@ -166,30 +240,17 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>28</power>
+				<power>66</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>2.4</cooldownTime>
 			</li>
-			<li>
-				<label>fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.4</cooldownTime>
-			</li>
 		</tools>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>OGIPowerWeapon</meleeDamageDef>
-			</li>
-		</verbs>
 		<costList>
-			<Component>5</Component>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>OPowerKlaw</li>
+			<li>OPowerMelee</li>
 		</weaponTags>
 		<thingCategories>
 			<li>OGOMelee</li>
@@ -198,7 +259,5 @@
 			<li>OGOMelee</li>
 		</tradeTags>
 	 </ThingDef>
-	 
-	 
 	 
 </Defs>

@@ -13,12 +13,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>400</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>750</MarketValue>
 		</statBases>
 		<equippedStatOffsets>
@@ -48,8 +48,14 @@
 				<cooldownTime>1.8</cooldownTime>
 			</li>
 		</tools>
+		<recipeMaker>
+			<recipeUsers>
+			
+			</recipeUsers>
+		<researchPrerequisite>TauAdvancedWeapons</researchPrerequisite>
+		</recipeMaker>
 		<costList>
-			<Component>5</Component>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>THonourBlade</li>

@@ -5,7 +5,7 @@
 	<!--==================== Thunder Hammer Sound =========================-->
 
 	<SoundDef>
-		<defName>OGI_Thunder</defName>
+		<defName>MeleeHit_Metal_ThunderHammer</defName>
 		<context>MapOnly</context>
 		<eventNames />  
 		<maxSimultaneous>1</maxSimultaneous>  

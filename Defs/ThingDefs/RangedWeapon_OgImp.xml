@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-  
 <!-- ====================== Bolt Pistol ===================== -->
-
-
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_BoltPistol</defName>
     <label>Pistol Bolt</label>
@@ -16,9 +13,11 @@
     <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGIBolt</damageDef>
-		<explosionRadius>1.01</explosionRadius>
-		<damageAmountBase>15</damageAmountBase>
-		<speed>100</speed>
+		<explosionRadius>0.5</explosionRadius>
+		<damageAmountBase>30</damageAmountBase>
+		<armorPenetrationBase>0.32</armorPenetrationBase>
+		<stoppingPower>1</stoppingPower>
+		<speed>75</speed>
 		<soundExplode>OGIPP_Explosion</soundExplode>
 	</projectile>
  </ThingDef>
@@ -31,7 +30,7 @@
 		<texPath>Things/Item/Equipment/WeaponRanged/BoltPistol</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-    <soundInteract>InteractAutopistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
 		<WorkToMake>27500</WorkToMake>
 		<MarketValue>1750</MarketValue>
@@ -39,7 +38,7 @@
 		<AccuracyTouch>0.90</AccuracyTouch>
 		<AccuracyShort>0.95</AccuracyShort>
 		<AccuracyMedium>0.80</AccuracyMedium>
-		<AccuracyLong>0.70</AccuracyLong>
+		<AccuracyLong>0.50</AccuracyLong>
 		<RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
     </statBases>
 	<recipeMaker>
@@ -48,12 +47,13 @@
     <costList>
 		<Steel>150</Steel>
 		<Plasteel>30</Plasteel>
-		<Component>4</Component>
+		<ComponentIndustrial>4</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>Gun</li>
 		<li>BoltPistol</li>
+		<li>GuevesaPistol</li>
     </weaponTags>
 	<thingCategories>
 		<li>OGIRanged</li>
@@ -66,8 +66,9 @@
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_BoltPistol</defaultProjectile>
-			<warmupTime>1</warmupTime>
-			<range>12</range>
+			<warmupTime>0.5</warmupTime>
+			<range>25</range>
+			<forcedMissRadius>0.5</forcedMissRadius>
 			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 			<burstShotCount>3</burstShotCount>
 			<soundCast>BoltSound</soundCast>
@@ -91,8 +92,6 @@
  </ThingDef>
  
 <!-- ====================== Bolter ===================== -->
-
-  
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_BoltGun</defName>
     <label>Bolt</label>
@@ -102,10 +101,11 @@
     </graphicData>
 	<thingClass>Projectile_Explosive</thingClass>
     <projectile>
-		<flyOverhead>false</flyOverhead>
 		<damageDef>OGIBolt</damageDef>
-	 	<explosionRadius>1.01</explosionRadius>
+	 	<explosionRadius>0.5</explosionRadius>
 		<damageAmountBase>30</damageAmountBase>
+		<armorPenetrationBase>0.32</armorPenetrationBase>
+		<stoppingPower>1</stoppingPower>
 		<speed>100</speed>
 		<soundExplode>OGIPP_Explosion</soundExplode>
     </projectile>
@@ -125,7 +125,7 @@
 			<compClass>AdeptusMechanicus.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>180000</WorkToMake>
 		<MarketValue>4000</MarketValue>
@@ -142,7 +142,7 @@
     <costList>
 		<Steel>175</Steel>
 		<Plasteel>60</Plasteel>
-		<Component>8</Component>
+		<ComponentIndustrial>8</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
@@ -157,11 +157,12 @@
 		</tradeTags>
     <verbs>
 		<li>
-			<verbClass>Verb_Shoot</verbClass>
+			<verbClass>AdeptusMechanicus.Verb_ShootRF</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_BoltGun</defaultProjectile>
 			<warmupTime>0.30</warmupTime>
-			<range>24</range>
+			<range>31</range>
+			<forcedMissRadius>0.5</forcedMissRadius>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 			<burstShotCount>3</burstShotCount>
 			<soundCast>BoltSound</soundCast>
@@ -193,9 +194,7 @@
     </tools>
  </ThingDef>
  
-<!-- ====================== Storm Bolter ===================== -->
-
-  
+<!-- ====================== Storm Bolter ===================== --> 
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_StormBolter</defName>
     <label>Bolt</label>
@@ -207,8 +206,10 @@
     <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGIBolt</damageDef>
-	 	<explosionRadius>1.01</explosionRadius>
+	 	<explosionRadius>0.75</explosionRadius>
 		<damageAmountBase>30</damageAmountBase>
+		<armorPenetrationBase>0.32</armorPenetrationBase>
+		<stoppingPower>1.5</stoppingPower>
 		<speed>100</speed>
 		<soundExplode>OGIPP_Explosion</soundExplode>
     </projectile>
@@ -228,7 +229,7 @@
 			<compClass>AdeptusMechanicus.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>180000</WorkToMake>
 		<MarketValue>4000</MarketValue>
@@ -245,7 +246,7 @@
     <costList>
 		<Steel>150</Steel>
 		<Plasteel>60</Plasteel>
-		<Component>8</Component>
+		<ComponentIndustrial>8</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
@@ -264,7 +265,8 @@
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_StormBolter</defaultProjectile>
 			<warmupTime>0.30</warmupTime>
-			<range>24</range>
+			<range>31</range>
+			<forcedMissRadius>0.5</forcedMissRadius>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 			<burstShotCount>6</burstShotCount>
 			<soundCast>BoltSound</soundCast>
@@ -297,8 +299,6 @@
  </ThingDef>
  
  <!-- ====================== Stalker Pattern Bolter ===================== -->
-
-  
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_StalkerBolter</defName>
     <label>Bolt</label>
@@ -311,6 +311,8 @@
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGIBolt</damageDef>
 		<damageAmountBase>30</damageAmountBase>
+		<armorPenetrationBase>0.32</armorPenetrationBase>
+		<stoppingPower>1.25</stoppingPower>
 		<speed>100</speed>
     </projectile>
  </ThingDef>
@@ -323,7 +325,7 @@
 		<texPath>Things/Item/Equipment/WeaponRanged/StalkerBolter</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>180000</WorkToMake>
 		<MarketValue>5000</MarketValue>
@@ -340,7 +342,7 @@
     <costList>
 		<Steel>150</Steel>
 		<Plasteel>45</Plasteel>
-		<Component>6</Component>
+		<ComponentIndustrial>6</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
@@ -357,10 +359,11 @@
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>OGI_Bullet_StormBolter</defaultProjectile>
-			<warmupTime>0.70</warmupTime>
-			<range>30</range>
-			<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+			<defaultProjectile>OGI_Bullet_StalkerBolter</defaultProjectile>
+			<warmupTime>1.70</warmupTime>
+			<range>45</range>
+			<forcedMissRadius>0.5</forcedMissRadius>
+			<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
 			<burstShotCount>2</burstShotCount>
 			<soundCast>BoltSound</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -392,8 +395,6 @@
  </ThingDef>
  
 <!-- ====================== Heavy Bolter ===================== -->
-
-  
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_HeavyBolter</defName>
     <label>Heavy Bolt</label>
@@ -407,6 +408,8 @@
 		<damageDef>OGIBolt</damageDef>
 	 	<explosionRadius>1.05</explosionRadius>
 		<damageAmountBase>45</damageAmountBase>
+		<armorPenetrationBase>0.48</armorPenetrationBase>
+		<stoppingPower>2</stoppingPower>
 		<speed>100</speed>
 		<soundExplode>OGIPP_Explosion</soundExplode>
     </projectile>
@@ -426,7 +429,7 @@
 			<compClass>AdeptusMechanicus.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>125000</WorkToMake>
 		<MarketValue>6500</MarketValue>
@@ -443,7 +446,7 @@
     <costList>
 		<Steel>200</Steel>
 		<Plasteel>60</Plasteel>
-		<Component>8</Component>
+		<ComponentIndustrial>8</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
@@ -464,8 +467,9 @@
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_HeavyBolter</defaultProjectile>
-			<warmupTime>2</warmupTime>
-			<range>36</range>
+			<warmupTime>3</warmupTime>
+			<range>38</range>
+			<forcedMissRadius>0.5</forcedMissRadius>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 			<burstShotCount>6</burstShotCount>
 			<soundCast>BoltSound</soundCast>
@@ -488,8 +492,7 @@
     </tools>
  </ThingDef>
 
- <!-- ====================== LasPistol ===================== -->
-
+<!-- ====================== LasPistol ===================== -->
 <ThingDef Class="AdeptusMechanicus.ThingDef_LaserProjectile" ParentName="BaseBullet">
 	<defName>OGI_Bullet_LasPistol</defName>
     <label>Laspistol Blast</label>
@@ -500,19 +503,20 @@
     <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGILas</damageDef>
-		<damageAmountBase>16</damageAmountBase>
+		<damageAmountBase>10</damageAmountBase>
+		<armorPenetrationBase>0.16</armorPenetrationBase>
+		<stoppingPower>1</stoppingPower>
 		<speed>105</speed>
     </projectile>
 		<thingClass>AdeptusMechanicus.Projectile_Laser</thingClass>
 			<preFiringInitialIntensity>0</preFiringInitialIntensity>
-			<preFiringFinalIntensity>1</preFiringFinalIntensity>
-			<postFiringInitialIntensity>1</postFiringInitialIntensity>
+			<preFiringFinalIntensity>2</preFiringFinalIntensity>
+			<postFiringInitialIntensity>2</postFiringInitialIntensity>
 			<postFiringFinalIntensity>0</postFiringFinalIntensity>
-			<preFiringDuration>1</preFiringDuration>
+			<preFiringDuration>2</preFiringDuration>
 			<postFiringDuration>10</postFiringDuration>
 			<StartFireChance>0.1</StartFireChance>	
  </ThingDef>
-
 
  <ThingDef ParentName="OGBaseMakeableGun">
     <defName>OGI_Gun_LasPistol</defName>
@@ -524,7 +528,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 		<texPath>Things/Item/Equipment/WeaponRanged/LasPistol</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>125000</WorkToMake>
 		<MarketValue>2500</MarketValue>
@@ -533,7 +537,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.80</AccuracyMedium>
 			<AccuracyLong>0.70</AccuracyLong>
-			<RangedWeapon_Cooldown>0.50</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
     </statBases>
 	<recipeMaker>
 		<researchPrerequisite>WRLasPistol</researchPrerequisite>
@@ -541,12 +545,13 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     <costList>
 		<Steel>175</Steel>
 		<Plasteel>70</Plasteel>
-		<Component>12</Component>
+		<ComponentIndustrial>12</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>Gun</li>
 		<li>LasPistol</li>
+		<li>GuevesaPistol</li>
 		</weaponTags>
 		<thingCategories>
 			<li>OGIRanged</li>
@@ -561,8 +566,10 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_LasPistol</defaultProjectile>
-			<warmupTime>0.5</warmupTime>
-			<range>12</range>
+			<warmupTime>0.3</warmupTime>
+			<range>25</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>4</burstShotCount>
 			<soundCast>HellgunSound</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>14</muzzleFlashScale>
@@ -592,7 +599,6 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
  </ThingDef>
   
 <!-- ====================== LasGun ===================== -->
-
 <ThingDef Class="AdeptusMechanicus.ThingDef_LaserProjectile" ParentName="BaseBullet">
 	<defName>OGI_Bullet_LasGun</defName>
     <label>Las Gun Blast</label>
@@ -603,19 +609,20 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGILas</damageDef>
-		<damageAmountBase>16</damageAmountBase>
+		<damageAmountBase>10</damageAmountBase>
+		<armorPenetrationBase>0.16</armorPenetrationBase>
+		<stoppingPower>1.25</stoppingPower>
 		<speed>105</speed>
     </projectile>
 		<thingClass>AdeptusMechanicus.Projectile_Laser</thingClass>
 			<preFiringInitialIntensity>0</preFiringInitialIntensity>
-			<preFiringFinalIntensity>1</preFiringFinalIntensity>
-			<postFiringInitialIntensity>1</postFiringInitialIntensity>
+			<preFiringFinalIntensity>2</preFiringFinalIntensity>
+			<postFiringInitialIntensity>2</postFiringInitialIntensity>
 			<postFiringFinalIntensity>0</postFiringFinalIntensity>
-			<preFiringDuration>1</preFiringDuration>
+			<preFiringDuration>2</preFiringDuration>
 			<postFiringDuration>10</postFiringDuration>
 			<StartFireChance>0.1</StartFireChance>	
  </ThingDef>
-
 
  <ThingDef ParentName="OGBaseMakeableGun">
     <defName>OGI_Gun_LasGun</defName>
@@ -625,7 +632,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 		<texPath>Things/Item/Equipment/WeaponRanged/LasGun</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>125000</WorkToMake>
 		<MarketValue>2500</MarketValue>
@@ -642,12 +649,13 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     <costList>
 		<Steel>175</Steel>
 		<Plasteel>70</Plasteel>
-		<Component>12</Component>
+		<ComponentIndustrial>12</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>Gun</li>
 		<li>Lasgun</li>
+		<li>GuevesaGun</li>
 		</weaponTags>
 		<thingCategories>
 			<li>OGIRanged</li>
@@ -659,11 +667,13 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     </equippedStatOffsets>
     <verbs>
 		<li>
-			<verbClass>Verb_Shoot</verbClass>
+			<verbClass>AdeptusMechanicus.Verb_ShootRF</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_LasGun</defaultProjectile>
 			<warmupTime>0.5</warmupTime>
 			<range>31</range>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<burstShotCount>3</burstShotCount>
 			<soundCast>HellgunSound</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>14</muzzleFlashScale>
@@ -692,10 +702,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     </tools>
  </ThingDef>
 
-  
-  
 <!-- ====================== Hellgun ===================== -->
-
 <ThingDef Class="AdeptusMechanicus.ThingDef_LaserProjectile" ParentName="BaseBullet">
 	<defName>OGI_Bullet_Hellgun</defName>
     <label>Hellgun Blast</label>
@@ -706,19 +713,20 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGILas</damageDef>
-		<damageAmountBase>16</damageAmountBase>
+		<damageAmountBase>20</damageAmountBase>
+		<armorPenetrationBase>0.32</armorPenetrationBase>
+		<stoppingPower>1.25</stoppingPower>
 		<speed>105</speed>
     </projectile>
 		<thingClass>AdeptusMechanicus.Projectile_Laser</thingClass>
 			<preFiringInitialIntensity>0</preFiringInitialIntensity>
-			<preFiringFinalIntensity>1</preFiringFinalIntensity>
-			<postFiringInitialIntensity>1</postFiringInitialIntensity>
+			<preFiringFinalIntensity>2</preFiringFinalIntensity>
+			<postFiringInitialIntensity>2</postFiringInitialIntensity>
 			<postFiringFinalIntensity>0</postFiringFinalIntensity>
-			<preFiringDuration>1</preFiringDuration>
+			<preFiringDuration>2</preFiringDuration>
 			<postFiringDuration>25</postFiringDuration>
 			<StartFireChance>0.1</StartFireChance>	
  </ThingDef>
-
 
  <ThingDef ParentName="OGBaseMakeableGun">
     <defName>OGI_Gun_Hellgun</defName>
@@ -728,7 +736,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 		<texPath>Things/Item/Equipment/WeaponRanged/Hellgun</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>125000</WorkToMake>
 		<MarketValue>2500</MarketValue>
@@ -737,7 +745,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.80</AccuracyMedium>
 			<AccuracyLong>0.70</AccuracyLong>
-			<RangedWeapon_Cooldown>0.70</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.70</RangedWeapon_Cooldown>
     </statBases>
 	<recipeMaker>
 		<researchPrerequisite>WRHellgun</researchPrerequisite>
@@ -745,12 +753,13 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     <costList>
 		<Steel>175</Steel>
 		<Plasteel>70</Plasteel>
-		<Component>12</Component>
+		<ComponentIndustrial>12</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>EliteGun</li>
 		<li>Hellgun</li>
+		<li>GuevesaAdvGun</li>
 		</weaponTags>
 		<thingCategories>
 			<li>OGIRanged</li>
@@ -762,11 +771,11 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     </equippedStatOffsets>
     <verbs>
 		<li>
-			<verbClass>Verb_Shoot</verbClass>
+			<verbClass>AdeptusMechanicus.Verb_ShootRF</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_Hellgun</defaultProjectile>
-			<warmupTime>0.5</warmupTime>
-			<range>31</range>
+			<warmupTime>1</warmupTime>
+			<range>35</range>
 			<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
 			<burstShotCount>6</burstShotCount>
 			<soundCast>HellgunSound</soundCast>
@@ -797,9 +806,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     </tools>
  </ThingDef>
 
-  
 <!-- ====================== Long-Las ===================== -->
-
 <ThingDef Class="AdeptusMechanicus.ThingDef_LaserProjectile" ParentName="BaseBullet">
 	<defName>OGI_Bullet_LongLas</defName>
     <label>Long-Las Blast</label>
@@ -811,18 +818,19 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGILas</damageDef>
 		<damageAmountBase>55</damageAmountBase>
+		<armorPenetrationBase>0.32</armorPenetrationBase>
+		<stoppingPower>1.5</stoppingPower>
 		<speed>105</speed>
     </projectile>
 		<thingClass>AdeptusMechanicus.Projectile_Laser</thingClass>
 			<preFiringInitialIntensity>0</preFiringInitialIntensity>
-			<preFiringFinalIntensity>1</preFiringFinalIntensity>
-			<postFiringInitialIntensity>1</postFiringInitialIntensity>
+			<preFiringFinalIntensity>2</preFiringFinalIntensity>
+			<postFiringInitialIntensity>2</postFiringInitialIntensity>
 			<postFiringFinalIntensity>0</postFiringFinalIntensity>
-			<preFiringDuration>1</preFiringDuration>
+			<preFiringDuration>2</preFiringDuration>
 			<postFiringDuration>25</postFiringDuration>
 			<StartFireChance>0.1</StartFireChance>	
  </ThingDef>
-
 
  <ThingDef ParentName="OGBaseMakeableGun">
     <defName>OGI_Gun_LongLas</defName>
@@ -832,7 +840,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 		<texPath>Things/Item/Equipment/WeaponRanged/LongLas</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>125000</WorkToMake>
 		<MarketValue>3500</MarketValue>
@@ -849,12 +857,13 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     <costList>
 		<Steel>175</Steel>
 		<Plasteel>30</Plasteel>
-		<Component>8</Component>
+		<ComponentIndustrial>8</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>EliteGun</li>
 		<li>LongLas</li>
+		<li>GuevesaAdvGun</li>
 		</weaponTags>
 		<thingCategories>
 			<li>OGIRanged</li>
@@ -871,7 +880,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_LongLas</defaultProjectile>
 			<warmupTime>2</warmupTime>
-			<range>48</range>
+			<range>45</range>
 			<soundCast>LongLasSound</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>14</muzzleFlashScale>
@@ -901,7 +910,6 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
  </ThingDef>
 
   <!-- ====================== Las Cannon ===================== -->
-
 <ThingDef Class="AdeptusMechanicus.ThingDef_LaserProjectile" ParentName="BaseBullet">
 	<defName>OGI_Bullet_LasCannon</defName>
     <label>Las Blast</label>
@@ -914,6 +922,8 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 		<damageDef>OGILas</damageDef>
 	 	<explosionRadius>0.55</explosionRadius>
 		<damageAmountBase>75</damageAmountBase>
+		<stoppingPower>4</stoppingPower>
+		<armorPenetrationBase>0.84</armorPenetrationBase>
 		<speed>105</speed>
 		<soundExplode>OGIPP_Explosion</soundExplode>
     </projectile>
@@ -929,7 +939,6 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 			<CanStartFire>true</CanStartFire>
  </ThingDef>
 
-
  <ThingDef ParentName="OGBaseMakeableGun">
     <defName>OGI_Gun_LasCannon</defName>
     <label>LasCannon</label>
@@ -944,7 +953,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 			<compClass>AdeptusMechanicus.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>125000</WorkToMake>
 		<MarketValue>7250</MarketValue>
@@ -961,7 +970,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     <costList>
 		<Steel>250</Steel>
 		<Plasteel>80</Plasteel>
-		<Component>16</Component>
+		<ComponentIndustrial>16</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
@@ -983,7 +992,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_LasCannon</defaultProjectile>
 			<warmupTime>4</warmupTime>
-			<range>48</range>
+			<range>45</range>
 			<soundCast>LascannonSound</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>14</muzzleFlashScale>
@@ -1003,11 +1012,8 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
       </li>
     </tools>
  </ThingDef>
-
   
 <!-- ====================== Plasma Pistol ===================== -->
-
-
  <ThingDef ParentName="OverheatBullet">
 	<defName>OGI_Bullet_PlasmaPistol</defName>
     <label>Plasma Bolt</label>
@@ -1021,6 +1027,8 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 		<damageDef>OGIPlasma</damageDef>
 		<explosionRadius>0.50</explosionRadius>
 		<damageAmountBase>17</damageAmountBase>
+		<armorPenetrationBase>0.68</armorPenetrationBase>
+		<stoppingPower>1.5</stoppingPower>
 		<speed>55</speed>
 		<soundExplode>OGIPP_Explosion</soundExplode>
 	</projectile>
@@ -1034,7 +1042,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 		<texPath>Things/Item/Equipment/WeaponRanged/PlasmaPistol</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-    <soundInteract>InteractAutopistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
 		<WorkToMake>15000</WorkToMake>
 		<MarketValue>2250</MarketValue>
@@ -1051,11 +1059,12 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     <costList>
 		<Steel>125</Steel>
 		<Plasteel>55</Plasteel>
-		<Component>10</Component>
+		<ComponentIndustrial>10</ComponentIndustrial>
     </costList>
 	<weaponTags>
 		<li>Gun</li>
 		<li>PlasmaPistol</li>
+		<li>GuevesaAdvPistol</li>
 	</weaponTags>
 	<thingCategories>
 		<li>OGIRanged</li>
@@ -1069,8 +1078,9 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 			<overheat>UR</overheat>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_PlasmaPistol</defaultProjectile>
-			<warmupTime>1</warmupTime>
-			<range>12</range>
+			<warmupTime>0.4</warmupTime>
+			<range>25</range>
+			<forcedMissRadius>0.5</forcedMissRadius>
 			<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
 			<burstShotCount>2</burstShotCount>
 			<soundCast>PlasmaPistolSound</soundCast>
@@ -1102,10 +1112,7 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
     </tools>
  </ThingDef>
  
- 
 <!-- ====================== Plasma Gun ===================== -->
-
-
  <ThingDef ParentName="OverheatBullet">
 	<defName>OGI_Bullet_PlasmaGun</defName>
     <label>Plasma Bolt</label>
@@ -1118,7 +1125,9 @@ The Laspistol is capable of producing the same amount of damage in a skilled use
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGIPlasma</damageDef>
 		<explosionRadius>0.50</explosionRadius>
-		<damageAmountBase>17</damageAmountBase>
+		<damageAmountBase>45</damageAmountBase>
+		<armorPenetrationBase>0.68</armorPenetrationBase>
+		<stoppingPower>2</stoppingPower>
 		<speed>55</speed>
 		<soundExplode>OGIPP_Explosion</soundExplode>
 	</projectile>
@@ -1134,7 +1143,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<texPath>Things/Item/Equipment/WeaponRanged/PlasmaGun</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-    <soundInteract>InteractAutopistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
 		<WorkToMake>18000</WorkToMake>
 		<MarketValue>3250</MarketValue>
@@ -1143,7 +1152,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<AccuracyShort>0.81</AccuracyShort>
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.52</AccuracyLong>
-		<RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+		<RangedWeapon_Cooldown>1.75</RangedWeapon_Cooldown>
     </statBases>
 	<recipeMaker>
 		<researchPrerequisite>WRPlasmaGun</researchPrerequisite>
@@ -1151,11 +1160,12 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <costList>
 		<Steel>175</Steel>
 		<Plasteel>55</Plasteel>
-		<Component>10</Component>
+		<ComponentIndustrial>10</ComponentIndustrial>
     </costList>
 	<weaponTags>
 		<li>EliteGun</li>
 		<li>PlasmaGun</li>
+		<li>GuevesaAdvGun</li>
 	</weaponTags>
 	<thingCategories>
 		<li>OGIRanged</li>
@@ -1165,12 +1175,13 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 	</tradeTags>
     <verbs>
 		<li Class="AdeptusMechanicus.VerbPropertiesOH">
-			<verbClass>AdeptusMechanicus.Verb_ShootOH</verbClass>
+			<verbClass>AdeptusMechanicus.Verb_ShootOHRF</verbClass>
 			<overheat>UR</overheat>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_PlasmaGun</defaultProjectile>
-			<warmupTime>1</warmupTime>
-			<range>24</range>
+			<warmupTime>1.25</warmupTime>
+			<range>31</range>
+			<forcedMissRadius>0.5</forcedMissRadius>
 			<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
 			<burstShotCount>3</burstShotCount>
 			<soundCast>PlasmaPistolSound</soundCast>
@@ -1203,8 +1214,6 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
  </ThingDef>
 
 <!-- ====================== Plasma Cannon ===================== -->
-
-  
  <ThingDef ParentName="OverheatBullet">
 	<defName>OGI_Bullet_PlasmaCannon</defName>
     <label>Plasma Bolt</label>
@@ -1217,7 +1226,9 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGIPlasmaCannon</damageDef>
 	 	<explosionRadius>2.55</explosionRadius>
-		<damageAmountBase>150</damageAmountBase>
+		<damageAmountBase>90</damageAmountBase>
+		<armorPenetrationBase>0.68</armorPenetrationBase>
+		<stoppingPower>3</stoppingPower>
 		<speed>55</speed>
 		<soundExplode>OGIPC_Explosion</soundExplode>
     </projectile>
@@ -1237,7 +1248,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<compClass>AdeptusMechanicus.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>120000</WorkToMake>
 		<MarketValue>8000</MarketValue>
@@ -1254,12 +1265,13 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <costList>
 		<Steel>300</Steel>
 		<Plasteel>200</Plasteel>
-		<Component>30</Component>
+		<ComponentIndustrial>30</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>GunHeavy</li>
 		<li>PlasmaCannon</li>
+		<li>GuevesaHeavyGun</li>
 	</weaponTags>
 	<thingCategories>
 		<li>OGIRanged</li>
@@ -1277,7 +1289,8 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_PlasmaCannon</defaultProjectile>
 			<warmupTime>4</warmupTime>
-			<range>42</range>
+			<range>45</range>
+			<forcedMissRadius>0.5</forcedMissRadius>
 			<soundCast>PlasmaCannonSound</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>14</muzzleFlashScale>
@@ -1299,19 +1312,18 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
  </ThingDef>
 
   <!-- ====================== AutoPistol ===================== -->
-
-
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_AutoPistol</defName>
     <label>Autopistol Bullett</label>
     <graphicData>
-		<texPath>Things/Projectile/AutoShotLrg</texPath>
+		<texPath>Things/Projectile/Bullet_Small</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGIAuto</damageDef>
-		<damageAmountBase>10</damageAmountBase>
+		<damageAmountBase>7</damageAmountBase>
+		<stoppingPower>1</stoppingPower>
 		<speed>100</speed>
 	</projectile>
  </ThingDef>
@@ -1330,7 +1342,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<compClass>AdeptusMechanicus.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>5000</WorkToMake>
 		<MarketValue>1250</MarketValue>
@@ -1347,12 +1359,13 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <costList>
 		<Steel>100</Steel>
 		<Plasteel>10</Plasteel>
-		<Component>5</Component>
+		<ComponentIndustrial>5</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>Gun</li>
-		<li>AutoGun</li>
+		<li>AutoPistol</li>
+		<li>GuevesaPistol</li>
 	</weaponTags>
 	<thingCategories>
 		<li>OGIRanged</li>
@@ -1369,10 +1382,10 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_AutoPistol</defaultProjectile>
 			<warmupTime>0.5</warmupTime>
-			<range>12</range>
+			<range>25</range>
 			<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
 			<burstShotCount>12</burstShotCount>
-			<soundCast>AutocannonSound</soundCast>
+			<soundCast>Shot_Autopistol</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>10</muzzleFlashScale>
 			<targetParams>
@@ -1391,23 +1404,21 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		</li>
     </tools>
  </ThingDef>
-  
 
   <!-- ====================== AutoGun ===================== -->
-
-
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_AutoGun</defName>
     <label>Autogun Bullett</label>
     <graphicData>
-		<texPath>Things/Projectile/AutoShotLrg</texPath>
+		<texPath>Things/Projectile/Bullet_Small</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGIAuto</damageDef>
-		<explosionRadius>0.50</explosionRadius>
-		<damageAmountBase>10</damageAmountBase>
+		<damageAmountBase>7</damageAmountBase>
+		<armorPenetrationBase>0.16</armorPenetrationBase>
+		<stoppingPower>1</stoppingPower>
 		<speed>100</speed>
 	</projectile>
  </ThingDef>
@@ -1426,7 +1437,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<compClass>AdeptusMechanicus.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>5000</WorkToMake>
 		<MarketValue>1250</MarketValue>
@@ -1443,12 +1454,13 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <costList>
 		<Steel>100</Steel>
 		<Plasteel>10</Plasteel>
-		<Component>5</Component>
+		<ComponentIndustrial>5</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>Gun</li>
 		<li>AutoGun</li>
+		<li>GuevesaGun</li>
 	</weaponTags>
 	<thingCategories>
 		<li>OGIRanged</li>
@@ -1457,18 +1469,18 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<li>OGIRanged</li>
 	</tradeTags>
     <equippedStatOffsets>
-		<MoveSpeed>-0.25</MoveSpeed>
+	
     </equippedStatOffsets>
     <verbs>
 		<li>
-			<verbClass>Verb_Shoot</verbClass>
+			<verbClass>AdeptusMechanicus.Verb_ShootRF</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_AutoGun</defaultProjectile>
 			<warmupTime>0.75</warmupTime>
-			<range>24</range>
+			<range>31</range>
 			<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
 			<burstShotCount>12</burstShotCount>
-			<soundCast>AutocannonSound</soundCast>
+			<soundCast>Shot_AssaultRifle</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>10</muzzleFlashScale>
 			<targetParams>
@@ -1489,8 +1501,6 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
  </ThingDef>
   
 <!-- ====================== AutoCannon ===================== -->
-
-
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_AutoCannon</defName>
     <label>AutoCannon Shell</label>
@@ -1504,6 +1514,8 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<damageDef>OGIAuto</damageDef>
 		<explosionRadius>0.50</explosionRadius>
 		<damageAmountBase>70</damageAmountBase>
+		<armorPenetrationBase>0.68</armorPenetrationBase>
+		<stoppingPower>2</stoppingPower>
 		<speed>100</speed>
 		<soundExplode>OGIAC_Explosion</soundExplode>
 	</projectile>
@@ -1523,7 +1535,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<compClass>AdeptusMechanicus.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>15000</WorkToMake>
 		<MarketValue>4250</MarketValue>
@@ -1532,7 +1544,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<AccuracyShort>0.81</AccuracyShort>
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.62</AccuracyLong>
-		<RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+		<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
     </statBases>
 	<recipeMaker>
 		<researchPrerequisite>WRAutoCannon</researchPrerequisite>
@@ -1540,7 +1552,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <costList>
 		<Steel>200</Steel>
 		<Plasteel>100</Plasteel>
-		<Component>10</Component>
+		<ComponentIndustrial>10</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
@@ -1561,8 +1573,9 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_AutoCannon</defaultProjectile>
-			<warmupTime>1</warmupTime>
-			<range>48</range>
+			<warmupTime>1.75</warmupTime>
+			<range>45</range>
+			<forcedMissRadius>0.5</forcedMissRadius>
 			<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
 			<burstShotCount>3</burstShotCount>
 			<soundCast>AutocannonSound</soundCast>
@@ -1586,8 +1599,6 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
  </ThingDef>
  
 <!-- ====================== Ogryn Ripper Gun ===================== -->
-
-
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_OgrynRipperGun</defName>
     <label>Ripper Blast</label>
@@ -1598,6 +1609,9 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGIRipper</damageDef>
+		<damageAmountBase>20</damageAmountBase>
+		<armorPenetrationBase>0.16</armorPenetrationBase>
+		<stoppingPower>4</stoppingPower>
 		<speed>50</speed>
 	</projectile>
  </ThingDef>
@@ -1610,7 +1624,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<texPath>Things/Item/Equipment/WeaponRanged/OgrynRipperGun</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-    <soundInteract>InteractShotgun</soundInteract>
+    <soundInteract>Interact_Shotgun</soundInteract>
     <statBases>
 		<WorkToMake>15000</WorkToMake>
 		<MarketValue>2250</MarketValue>
@@ -1627,7 +1641,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <costList>
 		<Steel>100</Steel>
 		<Plasteel>100</Plasteel>
-		<Component>10</Component>
+		<ComponentIndustrial>10</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
@@ -1648,11 +1662,11 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_OgrynRipperGun</defaultProjectile>
-			<warmupTime>1.5</warmupTime>
-			<range>12</range>
+			<warmupTime>0.5</warmupTime>
+			<range>16</range>
 			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 			<burstShotCount>12</burstShotCount>
-			<soundCast>ShotShotgun</soundCast>
+			<soundCast>Shot_Shotgun</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>10</muzzleFlashScale>
 			<targetParams>
@@ -1680,29 +1694,29 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     </tools>
  </ThingDef>
  
- 
-	<!--==================== Ogryn Grenade Gauntlet =========================-->
-
-	<ThingDef ParentName="BaseBullet">
+<!--==================== Ogryn Grenade Gauntlet =========================-->
+<ThingDef ParentName="BaseBullet">
 		<defName>OGI_Bullet_OgrynGrenadeGauntlet</defName>
 		<label>Ogryn Gauntlet Grenade</label>
+		<thingClass>Projectile_Explosive</thingClass>
 		<graphicData>
 			<texPath>Things/Projectile/Grenade</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
 			<flyOverhead>True</flyOverhead>
 			<damageDef>OGIBomb</damageDef>
 			<damageAmountBase>20</damageAmountBase>
+		<armorPenetrationBase>0.16</armorPenetrationBase>
 			<explosionRadius>1.00</explosionRadius>
+			<stoppingPower>1</stoppingPower>
 			<speed>35</speed>
 			<soundExplode>OGIAC_Explosion</soundExplode>
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="OGBaseMakeableGun">
+<ThingDef ParentName="OGBaseMakeableGun">
 		<defName>OGI_Gun_OgrynGrenadeGauntlet</defName>
 		<label>Grenadier Gauntlet</label>
 		<description>The Imperial Grenade Gauntlet is a type of heavy Grenade Launcher used by Imperial Guard Bullgryn's. The foe are left reeling and shell-shocked even before the maul-wielding Ogryns charge into their midst and bludgeon the survivors to a red paste.</description>
@@ -1710,15 +1724,16 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<texPath>Things/Item/Equipment/WeaponRanged/OgrynGrenadeGauntlet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<soundInteract>InteractAutopistol</soundInteract>
+		<soundInteract>Interact_Autopistol</soundInteract>
 		<statBases>
 			<WorkToMake>100000</WorkToMake>
 			<MarketValue>3250</MarketValue>
+			<Mass>7</Mass>
 			<AccuracyTouch>0.60</AccuracyTouch>
 			<AccuracyShort>0.60</AccuracyShort>
 			<AccuracyMedium>0.65</AccuracyMedium>
 			<AccuracyLong>0.50</AccuracyLong>
-			<RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.50</RangedWeapon_Cooldown>
 		</statBases>
 		<recipeMaker>
 			<researchPrerequisite>WRGrenadeGauntlet</researchPrerequisite>
@@ -1726,7 +1741,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<costList>
 		<Steel>175</Steel>
 		<Plasteel>75</Plasteel>
-		<Component>16</Component>
+		<ComponentIndustrial>16</ComponentIndustrial>
 		</costList>
 		<verbs>
 			<li>
@@ -1735,10 +1750,10 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 				<defaultProjectile>OGI_Bullet_OgrynGrenadeGauntlet</defaultProjectile>
 				<forcedMissRadius>5.0</forcedMissRadius>
 				<warmupTime>4.0</warmupTime>
-				<range>30</range>
+				<range>31</range>
 				<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
 				<burstShotCount>4</burstShotCount>
-				<soundCast>ShotIncendiaryLauncher</soundCast>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>12</muzzleFlashScale>
 				<targetParams>
@@ -1777,9 +1792,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     </tools>
 	</ThingDef>
 	
-<!-- ====================== AssaultCannon ===================== -->
-
-  
+<!-- ====================== AssaultCannon ===================== --> 
  <ThingDef ParentName="JamableBullet">
 	<defName>OGI_Bullet_AssaultCannon</defName>
     <label>Assaultcannon bullet</label>
@@ -1789,7 +1802,9 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     </graphicData>
     <projectile>
 		<damageDef>OGIAssault</damageDef>
-		<damageAmountBase>15</damageAmountBase>
+		<damageAmountBase>5</damageAmountBase>
+		<armorPenetrationBase>0.48</armorPenetrationBase>
+		<stoppingPower>1</stoppingPower>
 		<speed>100</speed>
     </projectile>
  </ThingDef>
@@ -1808,17 +1823,16 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<compClass>AdeptusMechanicus.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>120000</WorkToMake>
 		<MarketValue>4750</MarketValue>
 		<Mass>10</Mass>
 		<AccuracyTouch>0.60</AccuracyTouch>
-		<AccuracyShort>0.52</AccuracyShort>
+		<AccuracyShort>0.55</AccuracyShort>
 		<AccuracyMedium>0.40</AccuracyMedium>
-		<AccuracyLong>0.30</AccuracyLong>
-		<RangedWeapon_Cooldown>3.00</RangedWeapon_Cooldown>
-		<Weapon_Bulk>2.0</Weapon_Bulk>
+		<AccuracyLong>0.35</AccuracyLong>
+		<RangedWeapon_Cooldown>4.00</RangedWeapon_Cooldown>
 	</statBases>
 	<recipeMaker>
 		<researchPrerequisite>WRAssaultCannon</researchPrerequisite>
@@ -1826,7 +1840,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <costList>
 		<Steel>150</Steel>
 		<Plasteel>75</Plasteel>
-		<Component>24</Component>
+		<ComponentIndustrial>24</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
@@ -1848,9 +1862,8 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<reliability>UR</reliability>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_AssaultCannon</defaultProjectile>
-			<warmupTime>3</warmupTime>
-			<forcedMissRadius>0.8</forcedMissRadius>
-			<range>24</range>
+			<warmupTime>1.5</warmupTime>
+			<range>38</range>
 			<burstShotCount>120</burstShotCount>
 			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
 			<soundCast>AssaultcannonSound</soundCast>
@@ -1874,8 +1887,6 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
  </ThingDef>
 	
 <!-- ====================== Heavy Stubber ===================== -->
-
-  
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_HeavyStubber</defName>
     <label>Heavy Stubber Bullet</label>
@@ -1885,7 +1896,9 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     </graphicData>
     <projectile>
 		<damageDef>OGIAssault</damageDef>
-		<damageAmountBase>15</damageAmountBase>
+		<damageAmountBase>7</damageAmountBase>
+		<armorPenetrationBase>0.32</armorPenetrationBase>
+		<stoppingPower>1.25</stoppingPower>
 		<speed>100</speed>
     </projectile>
  </ThingDef>
@@ -1904,7 +1917,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<compClass>AdeptusMechanicus.CompOversizedWeapon</compClass>
 		</li>
 	</comps>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>120000</WorkToMake>
 		<MarketValue>2000</MarketValue>
@@ -1914,7 +1927,6 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<AccuracyMedium>0.75</AccuracyMedium>
 		<AccuracyLong>0.72</AccuracyLong>
 		<RangedWeapon_Cooldown>3.00</RangedWeapon_Cooldown>
-		<Weapon_Bulk>2.0</Weapon_Bulk>
 	</statBases>
 	<recipeMaker>
 		<researchPrerequisite>ImperialHeavyWeapons</researchPrerequisite>
@@ -1922,12 +1934,13 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <costList>
 		<Steel>150</Steel>
 		<Plasteel>50</Plasteel>
-		<Component>6</Component>
+		<ComponentIndustrial>6</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>GunHeavy</li>
 		<li>HeavyStubber</li>
+		<li>GuevesaGun</li>
 	</weaponTags>
 	<thingCategories>
 		<li>OGIRanged</li>
@@ -1944,11 +1957,10 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_HeavyStubber</defaultProjectile>
 			<warmupTime>3</warmupTime>
-			<forcedMissRadius>0.8</forcedMissRadius>
-			<range>24</range>
+			<range>36</range>
 			<burstShotCount>24</burstShotCount>
 			<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-			<soundCast>ShotMinigun</soundCast>
+			<soundCast>Shot_Minigun</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>14</muzzleFlashScale>
 			<targetParams>
@@ -1969,8 +1981,6 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
  </ThingDef>
 
 <!-- ====================== Flamer ===================== -->
-
-  
  <ThingDef ParentName="BaseBullet">
 	<defName>OGI_Bullet_Flamer</defName>
     <label>burning promethium </label>
@@ -1982,11 +1992,13 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
 			<flyOverhead>false</flyOverhead>
-			<damageDef>Flame</damageDef>
+			<damageDef>OGFlamer</damageDef>
 			<damageAmountBase>3</damageAmountBase>
+		<armorPenetrationBase>0.16</armorPenetrationBase>
 			<explosionRadius>1.00</explosionRadius>
-			<postExplosionSpawnThingDef>FilthFuel</postExplosionSpawnThingDef>
+			<postExplosionSpawnThingDef>Filth_Fuel</postExplosionSpawnThingDef>
 			<preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+			<stoppingPower>0.75</stoppingPower>
 			<speed>20</speed>
 			<soundExplode>OGIFL_Explosion</soundExplode>
     </projectile>
@@ -2000,7 +2012,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<texPath>Things/Item/Equipment/WeaponRanged/Flamer</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
 		<WorkToMake>120000</WorkToMake>
 		<MarketValue>2000</MarketValue>
@@ -2017,12 +2029,13 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <costList>
 		<Steel>150</Steel>
 		<Plasteel>15</Plasteel>
-		<Component>4</Component>
+		<ComponentIndustrial>4</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>EliteGun</li>
 		<li>Flamer</li>
+		<li>GuevesaSpecialGun</li>
 	</weaponTags>
 	<thingCategories>
 		<li>OGIRanged</li>
@@ -2035,8 +2048,9 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_Flamer</defaultProjectile>
-			<warmupTime>1.5</warmupTime>
+			<warmupTime>0.5</warmupTime>
 			<range>12</range>
+			<forcedMissRadius>0.5</forcedMissRadius>
 			<burstShotCount>36</burstShotCount>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 			<soundCast>FlamerSound</soundCast>
@@ -2069,8 +2083,6 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
  </ThingDef>
 
 <!-- ====================== Metla Gun ===================== -->
-
-
 <ThingDef Class="AdeptusMechanicus.ThingDef_LaserProjectile" ParentName="BaseBullet">
 	<defName>OGI_Bullet_MeltaGun</defName>
     <label>Melta Blast</label>
@@ -2082,8 +2094,10 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OGIMelta</damageDef>
 		<damageAmountBase>125</damageAmountBase>
+		<armorPenetrationBase>1</armorPenetrationBase>
 		<speed>50</speed>
 		<explosionRadius>0.50</explosionRadius>
+		<stoppingPower>4</stoppingPower>
 		<soundExplode>OGIFL_Explosion</soundExplode>
     </projectile>
 		<thingClass>AdeptusMechanicus.Projectile_Laser</thingClass>
@@ -2105,7 +2119,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 		<texPath>Things/Item/Equipment/WeaponRanged/MeltaGun</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractAutopistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
 		<WorkToMake>120000</WorkToMake>
 		<MarketValue>6000</MarketValue>
@@ -2122,12 +2136,13 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
     <costList>
 		<Steel>150</Steel>
 		<Plasteel>100</Plasteel>
-		<Component>40</Component>
+		<ComponentIndustrial>40</ComponentIndustrial>
     </costList>
 	<techLevel>Spacer</techLevel>
     <weaponTags>
 		<li>EliteGun</li>
 		<li>MetlaGun</li>
+		<li>GuevesaSpecialGun</li>
 	</weaponTags>
 	<thingCategories>
 		<li>OGIRanged</li>
@@ -2140,7 +2155,7 @@ Plasma Weapons make use of hydrogen fuel suspended in a liquid state in either f
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>OGI_Bullet_MeltaGun</defaultProjectile>
-			<warmupTime>2</warmupTime>
+			<warmupTime>0.5</warmupTime>
 			<range>16</range>
 			<soundCast>MeltaSound</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>

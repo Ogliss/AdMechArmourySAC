@@ -12,12 +12,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>200</costStuffCount>
 		<statBases>
 			<WorkToMake>7500</WorkToMake>
 			<Mass>3.2</Mass>
-			<Weapon_Bulk>2.2</Weapon_Bulk>
+			
 			<MarketValue>2250</MarketValue>
 		</statBases>
 		<equippedAngleOffset>-20</equippedAngleOffset>
@@ -52,12 +52,12 @@
 		</tools>
 		<recipeMaker>
 			<recipeUsers>
-				<li>TableMachining</li>
+			
 			</recipeUsers>
 		<researchPrerequisite>ImperialWeapons</researchPrerequisite>
 		</recipeMaker>
 		<costList>
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>IChainsword</li>
@@ -81,12 +81,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>200</costStuffCount>
 		<statBases>
 			<WorkToMake>17500</WorkToMake>
 			<Mass>4.2</Mass>
-			<Weapon_Bulk>3.2</Weapon_Bulk>
+			
 			<MarketValue>2250</MarketValue>
 		</statBases>
 		<equippedAngleOffset>-20</equippedAngleOffset>
@@ -95,28 +95,22 @@
 		</stuffCategories>
 		<tools>
 			<li>
-				<label>pommel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>1.2</cooldownTime>
-			</li>
-			<li>
 				<label>blade</label>
 				<capacities>
 					<li>Cut</li>
 				</capacities>
 				<power>17</power>
-				<cooldownTime>1.6</cooldownTime>
+				<armorPenetration>0.5</armorPenetration>
+				<cooldownTime>1.9</cooldownTime>
 			</li>
 			<li>
 				<label>point</label>
 				<capacities>
 					<li>Stab</li>
 				</capacities>
-				<power>28</power>
-				<cooldownTime>2.1</cooldownTime>
+				<power>17</power>
+				<armorPenetration>0.5</armorPenetration>
+				<cooldownTime>1.9</cooldownTime>
 			</li>
 		</tools>
 		<recipeMaker>
@@ -126,7 +120,7 @@
 		<researchPrerequisite>ImperialWeapons</researchPrerequisite>
 		</recipeMaker>
 		<costList>
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>IEviscerator</li>
@@ -150,12 +144,11 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>200</costStuffCount>
 		<statBases>
 			<WorkToMake>15000</WorkToMake>
 			<Mass>2.0</Mass>
-			<Weapon_Bulk>2.0</Weapon_Bulk>
 			<MarketValue>2250</MarketValue>
 		</statBases>
 		<equippedAngleOffset>-20</equippedAngleOffset>
@@ -164,19 +157,12 @@
 		</stuffCategories>
 		<tools>
 			<li>
-				<label>pomel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.0</cooldownTime>
-			</li>
-			<li>
 				<label>blade</label>
 				<capacities>
 					<li>Cut</li>
 				</capacities>
 				<power>14</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>1.3</cooldownTime>
 			</li>
 			<li>
@@ -185,16 +171,10 @@
 					<li>Stab</li>
 				</capacities>
 				<power>20</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>1.8</cooldownTime>
 			</li>
 		</tools>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>OGIPowerWeapon</meleeDamageDef>
-			</li>
-		</verbs>
 		<recipeMaker>
 			<recipeUsers>
 				<li>TableMachining</li>
@@ -202,7 +182,7 @@
 		<researchPrerequisite>WRPowerWeapons</researchPrerequisite>
 		</recipeMaker>
 		<costList>
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>IPowerSword</li>
@@ -227,12 +207,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>200</costStuffCount>
 		<statBases>
 			<WorkToMake>15000</WorkToMake>
 			<Mass>2.0</Mass>
-			<Weapon_Bulk>2.0</Weapon_Bulk>
+			
 			<MarketValue>7250</MarketValue>
 		</statBases>
 		<equippedAngleOffset>-20</equippedAngleOffset>
@@ -241,29 +221,16 @@
 		</stuffCategories>
 		<tools>
 			<li>
-				<label>pomel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.0</cooldownTime>
-			</li>
-			<li>
 				<label>head</label>
 				<capacities>
 					<li>Cut</li>
 				</capacities>
 				<power>25</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>1.9</cooldownTime>
 			</li>
 		</tools>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>OGIPowerWeapon</meleeDamageDef>
-			</li>
-		</verbs>
+
 		<recipeMaker>
 			<recipeUsers>
 				<li>TableMachining</li>
@@ -271,7 +238,7 @@
 		<researchPrerequisite>WRPowerWeapons</researchPrerequisite>
 		</recipeMaker>
 		<costList>
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>IPowerAxe</li>
@@ -295,12 +262,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>200</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>3.2</Mass>
-			<Weapon_Bulk>2.2</Weapon_Bulk>
+			
 			<MarketValue>2250</MarketValue>
 		</statBases>
 		<equippedAngleOffset>-20</equippedAngleOffset>
@@ -309,19 +276,12 @@
 		</stuffCategories>
 		<tools>
 			<li>
-				<label>backhand</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.0</cooldownTime>
-			</li>
-			<li>
 				<label>blade</label>
 				<capacities>
 					<li>Cut</li>
 				</capacities>
 				<power>14</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>1.3</cooldownTime>
 			</li>
 			<li>
@@ -330,16 +290,11 @@
 					<li>Stab</li>
 				</capacities>
 				<power>20</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>1.8</cooldownTime>
 			</li>
 		</tools>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>OGIPowerWeapon</meleeDamageDef>
-			</li>
-		</verbs>
+
 		<recipeMaker>
 			<recipeUsers>
 				<li>TableMachining</li>
@@ -347,7 +302,7 @@
 		<researchPrerequisite>ImperialSpecialPowerWeapons</researchPrerequisite>
 		</recipeMaker>
 		<costList>
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>IGCLightningClaw</li>
@@ -371,12 +326,11 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>200</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>3.2</Mass>
-			<Weapon_Bulk>2.2</Weapon_Bulk>
 			<MarketValue>1250</MarketValue>
 		</statBases>
 		<equippedAngleOffset>-20</equippedAngleOffset>
@@ -385,19 +339,12 @@
 		</stuffCategories>
 		<tools>
 			<li>
-				<label>backhand</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>0.50</cooldownTime>
-			</li>
-			<li>
 				<label>blade</label>
 				<capacities>
 					<li>Cut</li>
 				</capacities>
 				<power>14</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>0.65</cooldownTime>
 			</li>
 			<li>
@@ -406,16 +353,11 @@
 					<li>Stab</li>
 				</capacities>
 				<power>20</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>0.9</cooldownTime>
 			</li>
 		</tools>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>OGIPowerWeapon</meleeDamageDef>
-			</li>
-		</verbs>
+
 		<recipeMaker>
 			<recipeUsers>
 				<li>TableMachining</li>
@@ -423,7 +365,7 @@
 		<researchPrerequisite>ImperialSpecialPowerWeapons</researchPrerequisite>
 		</recipeMaker>
 		<costList>
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>IGCDualLightningClaw</li>
@@ -447,12 +389,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>400</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>750</MarketValue>
 		</statBases>
 		<equippedAngleOffset>-25</equippedAngleOffset>
@@ -461,38 +403,25 @@
 		</stuffCategories>
 		<tools>
 			<li>
-				<label>backhand</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.4</cooldownTime>
-			</li>
-			<li>
 				<label>fist</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>28</power>
+				<power>66</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>2.8</cooldownTime>
 			</li>
 		</tools>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>OGIPowerWeapon</meleeDamageDef>
-			</li>
-		</verbs>
+
 		<recipeMaker>
 			<recipeUsers>
 				<li>TableMachining</li>
 			</recipeUsers>
-		<researchPrerequisite>ImperialHeavyWeapons</researchPrerequisite>
-		<researchPrerequisite>ImperialSpecialPowerWeapons</researchPrerequisite>
+			
+			<researchPrerequisite>ImperialSpecialPowerWeapons</researchPrerequisite>
 		</recipeMaker>
 		<costList>
-			<Component>5</Component>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>IGCPowerFist</li>
@@ -516,12 +445,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>600</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>3.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>750</MarketValue>
 		</statBases>
 		<equippedAngleOffset>-25</equippedAngleOffset>
@@ -530,29 +459,15 @@
 		</stuffCategories>
 		<tools>
 			<li>
-				<label>haft</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.4</cooldownTime>
-			</li>
-			<li>
 				<label>head</label>
 				<capacities>
-					<li>Blunt</li>
+					<li>PowerMaul</li>
 				</capacities>
-				<power>28</power>
+				<power>8</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>1.8</cooldownTime>
 			</li>
 		</tools>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>OGIPowerMaul</meleeDamageDef>
-			</li>
-		</verbs>
 		<recipeMaker>
 			<recipeUsers>
 				<li>TableMachining</li>
@@ -560,7 +475,7 @@
 		<researchPrerequisite>WRPowerWeapons</researchPrerequisite>
 		</recipeMaker>
 		<costList>
-			<Component>5</Component>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>IPowerMaul</li>
@@ -584,12 +499,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>600</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>3.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>750</MarketValue>
 		</statBases>
 		<equippedAngleOffset>-25</equippedAngleOffset>
@@ -621,7 +536,7 @@
 		<researchPrerequisite>WRForceWeapons</researchPrerequisite>
 		</recipeMaker>
 		<costList>
-			<Component>5</Component>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>IForceStaff</li>
@@ -645,12 +560,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>600</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>3.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>750</MarketValue>
 		</statBases>
 		<equippedAngleOffset>-25</equippedAngleOffset>
@@ -659,20 +574,12 @@
 		</stuffCategories>
 		<tools>
 			<li>
-				<label>haft</label>
-				<capacities>
-					<li>Poke</li>
-				</capacities>
-				<power>16</power>
-				<cooldownTime>1.4</cooldownTime>
-			</li>
-			<li>
 				<label>head</label>
-				<labelUsedInLogging>false</labelUsedInLogging>
 				<capacities>
 					<li>ThunderBlunt</li>
 				</capacities>
 				<power>56</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>2.8</cooldownTime>
 			</li>
 		</tools>
@@ -680,11 +587,11 @@
 			<recipeUsers>
 				<li>TableMachining</li>
 			</recipeUsers>
-		<researchPrerequisite>ImperialHeavyWeapons</researchPrerequisite>
-		<researchPrerequisite>ImperialSpecialPowerWeapons</researchPrerequisite>
+			
+			<researchPrerequisite>ImperialSpecialPowerWeapons</researchPrerequisite>
 		</recipeMaker>
 		<costList>
-			<Component>5</Component>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 			<li>IThunderHammer</li>

@@ -1,84 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-
-	<!--==================== Eldar  - Harlequin's Kiss =========================-->
-
-	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
-		<defName>Melee_HarlequinsKiss</defName>
-		<label>Elder Harlequin's Kiss</label>
-		<description>A Harlequin's Kiss (called the brathu-angau in the Eldar Lexicon, literally "kiss of doom"), also sometimes called a Sting, is one of the more horrifying close combat weapons employed by the Eldar, and is used only by Harlequins. Arguably the most iconic weapon that the masques carry to war, the Harlequin's Kiss is horrifically lethal. This weapon consists of a sharpened tube containing high-tensile monofilament wire, like those used in the Death Spinners, and is worn on the forearm. The Kiss is only effective in close combat. It contains a tightly-coiled retractable monofilament wire which is around 100 metres in length. When activated, usually by a forward punching motion, the wire is violently released. Capable of piercing armour, if the wire penetrates its victim it instantly uncoils and lashes around violently, liquefying bones and internal organs, and causing immediate death in a spectacular and bloody fashion. The wire then retracts back into the Kiss for another use.</description>
-		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponMelee/HarlequinsKiss</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
-		<costStuffCount>400</costStuffCount>
-		<statBases>
-			<WorkToMake>27500</WorkToMake>
-			<Mass>0.5</Mass>
-			<Weapon_Bulk>0.25</Weapon_Bulk>
-			<MarketValue>7500</MarketValue>
-		</statBases>
-		<equippedStatOffsets>
-			<MeleeHitChance>0.25</MeleeHitChance>
-			<PsychicSensitivity>0.15</PsychicSensitivity>
-			<MoveSpeed>0.25</MoveSpeed>
-		</equippedStatOffsets>
-		<equippedAngleOffset>-25</equippedAngleOffset>
-		<stuffCategories>
-			<li>Metallic</li>
-		</stuffCategories>
-		<tools>
-			<li>
-				<label>handle</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.0</cooldownTime>
-			</li>
-			<li>
-				<label>head</label>
-				<capacities>
-					<li>Cut</li>
-					<li>Stab</li>
-				</capacities>
-				<power>16</power>
-				<cooldownTime>1.4</cooldownTime>
-			</li>
-			<li>
-				<label>sting</label>
-				<capacities>
-					<li>Stab</li>
-				</capacities>
-				<power>200</power>
-				<cooldownTime>30</cooldownTime>
-			</li>
-		</tools>
-		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
-			<Component>1</Component>
-			<Plasteel>2</Plasteel>
-			<Steel>10</Steel>
-		</costList>
-		<weaponTags>
-			<li>EHarlequinsKiss</li>
-			<li>ESpecialMelee</li>
-			<li>EArmoury</li>
-		</weaponTags>
-		<thingCategories>
-			<li>OGEMelee</li>
-		</thingCategories>
-		<tradeTags>
-			<li>OGEMelee</li>
-		</tradeTags>
-	 </ThingDef>
-	 
-
-<!--==================== Eldar  - Scorpion Chainsword =========================-->
-
+	<!--==================== Eldar  - Scorpion Chainsword =========================-->
 	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
 		<defName>Melee_ScorpionChainsword</defName>
 		<label>Elder Scorpion Chainsword</label>
@@ -88,12 +10,11 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>400</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
 			<MarketValue>3500</MarketValue>
 		</statBases>
 		<equippedStatOffsets>
@@ -139,8 +60,14 @@
 				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
+		<recipeMaker>
+			<recipeUsers>
+			
+			</recipeUsers>
+		<researchPrerequisite>EldarTechBase</researchPrerequisite>
+		</recipeMaker>
 		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<Plasteel>2</Plasteel>
 			<Steel>10</Steel>
 		</costList>
@@ -156,9 +83,7 @@
 		</tradeTags>
 	 </ThingDef>	 
 
-
-<!--==================== Eldar  - Power Sword =========================-->
-
+	<!--==================== Eldar  - Power Sword =========================-->
 	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
 		<defName>Melee_PowerSword</defName>
 		<label>Elder Power Sword</label>
@@ -168,12 +93,11 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>400</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
 			<MarketValue>3500</MarketValue>
 		</statBases>
 		<equippedStatOffsets>
@@ -187,27 +111,12 @@
 		</stuffCategories>
 		<tools>
 			<li>
-				<label>pommel</label>
-				<capacities>
-					<li>Poke</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.0</cooldownTime>
-			</li>
-			<li>
-				<label>hilt</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.0</cooldownTime>
-			</li>
-			<li>
 				<label>blade</label>
 				<capacities>
 					<li>Cut</li>
 				</capacities>
 				<power>20</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>1.4</cooldownTime>
 			</li>
 			<li>
@@ -216,18 +125,18 @@
 					<li>Stab</li>
 				</capacities>
 				<power>30</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>OGIPowerWeapon</meleeDamageDef>
-			</li>
-		</verbs>
+		<recipeMaker>
+			<recipeUsers>
+			
+			</recipeUsers>
+		<researchPrerequisite>EldarTechBase</researchPrerequisite>
+		</recipeMaker>
 		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<Plasteel>2</Plasteel>
 			<Steel>10</Steel>
 		</costList>
@@ -243,9 +152,7 @@
 		</tradeTags>
 	 </ThingDef>	 
 
-
-<!--==================== Eldar  - Witchblade =========================-->
-
+	<!--==================== Eldar  - Witchblade =========================-->
 	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
 		<defName>Melee_Witchblade</defName>
 		<label>Elder Witchblade</label>
@@ -255,12 +162,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>400</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>3500</MarketValue>
 		</statBases>
 		<equippedStatOffsets>
@@ -274,27 +181,12 @@
 		</stuffCategories>
 		<tools>
 			<li>
-				<label>pommel</label>
-				<capacities>
-					<li>Poke</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.0</cooldownTime>
-			</li>
-			<li>
-				<label>hilt</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8</power>
-				<cooldownTime>1.0</cooldownTime>
-			</li>
-			<li>
 				<label>blade</label>
 				<capacities>
 					<li>Cut</li>
 				</capacities>
 				<power>20</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>1.4</cooldownTime>
 			</li>
 			<li>
@@ -303,18 +195,18 @@
 					<li>Stab</li>
 				</capacities>
 				<power>30</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>OGIPowerWeapon</meleeDamageDef>
-			</li>
-		</verbs>
+		<recipeMaker>
+			<recipeUsers>
+			
+			</recipeUsers>
+		<researchPrerequisite>EldarTechBase</researchPrerequisite>
+		</recipeMaker>
 		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<Plasteel>2</Plasteel>
 			<Steel>10</Steel>
 		</costList>
@@ -331,9 +223,7 @@
 		</tradeTags>
 	 </ThingDef>	 
 
-
-<!--==================== Eldar  - Ghost Sword =========================-->
-
+	<!--==================== Eldar  - Ghost Sword =========================-->
 	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
 		<defName>Melee_GhostSword</defName>
 		<label>Elder Ghost Sword</label>
@@ -343,12 +233,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>400</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>3500</MarketValue>
 		</statBases>
 		<equippedStatOffsets>
@@ -394,8 +284,14 @@
 				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
+		<recipeMaker>
+			<recipeUsers>
+			
+			</recipeUsers>
+		<researchPrerequisite>EldarTechBase</researchPrerequisite>
+		</recipeMaker>
 		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<Plasteel>2</Plasteel>
 			<Steel>10</Steel>
 		</costList>
@@ -412,9 +308,7 @@
 		</tradeTags>
 	 </ThingDef>	 
 
-	 
 	<!--==================== Eldar  - Dual Ghost Swords =========================-->
-
 	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
 		<defName>Melee_DualGhostSword</defName>
 		<label>Elder Dual Ghost Swords</label>
@@ -424,12 +318,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>400</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>4500</MarketValue>
 		</statBases>
 		<equippedStatOffsets>
@@ -475,8 +369,14 @@
 				<cooldownTime>1.25</cooldownTime>
 			</li>
 		</tools>
+		<recipeMaker>
+			<recipeUsers>
+			
+			</recipeUsers>
+		<researchPrerequisite>EldarTechBase</researchPrerequisite>
+		</recipeMaker>
 		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<Plasteel>2</Plasteel>
 			<Steel>10</Steel>
 		</costList>
@@ -494,7 +394,6 @@
 	 </ThingDef>
 	 
 	<!--==================== Eldar  - Ghost Axe =========================-->
-
 	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
 		<defName>Melee_GhostAxe</defName>
 		<label>Elder Ghost Axe</label>
@@ -504,12 +403,12 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>400</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>4250</MarketValue>
 		</statBases>
 		<equippedStatOffsets>
@@ -541,8 +440,14 @@
 				<cooldownTime>1.9</cooldownTime>
 			</li>
 		</tools>
+		<recipeMaker>
+			<recipeUsers>
+			
+			</recipeUsers>
+		<researchPrerequisite>EldarTechBase</researchPrerequisite>
+		</recipeMaker>
 		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<Plasteel>2</Plasteel>
 			<Steel>10</Steel>
 		</costList>
@@ -560,8 +465,7 @@
 	 </ThingDef>
 	 
   	<!--==================== Eldar  - Executioner =========================-->
- 
-<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
+	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
 		<defName>Melee_Executioner</defName>
 		<label>Executioner</label>
 		<description>The Executioner is a large two-handed Power Glaive available only to Howling Banshee Exarchs, which is capable of slicing an opponent in half with a single blow. The Phoenix Lords Jain Zar and Maugan Ra also use Executioners.</description>
@@ -569,12 +473,12 @@
 			<texPath>Things/Item/Equipment/WeaponMelee/Executioner</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<soundInteract>InteractRevolver</soundInteract>
+		<soundInteract>Interact_Revolver</soundInteract>
 		<costStuffCount>400</costStuffCount>
 		<statBases>
 			<WorkToMake>27500</WorkToMake>
 			<Mass>2.5</Mass>
-			<Weapon_Bulk>2.25</Weapon_Bulk>
+			
 			<MarketValue>14250</MarketValue>
 		</statBases>
 		<equippedStatOffsets>
@@ -587,21 +491,13 @@
 			<li>Metallic</li>
 		</stuffCategories>
     <tools>
-      <li>
-        <label>shaft</label>
-			<capacities>
-				<li>Blunt</li>
-				<li>Poke</li>
-			</capacities>
-			<power>8</power>
-			<cooldownTime>2.3</cooldownTime>
-		</li>
 		<li>
 			<label>point</label>
 			<capacities>
 				<li>Stab</li>
 			</capacities>
 			<power>50.5</power>
+			<armorPenetration>1</armorPenetration>
 			<cooldownTime>2.3</cooldownTime>
 		</li>
 		<li>
@@ -610,18 +506,18 @@
 					<li>Cut</li>
 				</capacities>
 				<power>30</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>1.7</cooldownTime>
 			</li>
     </tools>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>OGIPowerWeapon</meleeDamageDef>
-			</li>
-		</verbs>
+		<recipeMaker>
+			<recipeUsers>
+			
+			</recipeUsers>
+		<researchPrerequisite>EldarTechBase</researchPrerequisite>
+		</recipeMaker>
 		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<Plasteel>2</Plasteel>
 			<Steel>10</Steel>
 		</costList>
@@ -637,10 +533,87 @@
 			<li>OGEMelee</li>
 		</tradeTags>
 	</ThingDef>
-	 
- 	<!--==================== Eldar  - Singing Spear =========================-->
-	 
-  <ThingDef ParentName="BaseProjectileNeolithic">
+
+	<!--==================== Eldar  - Harlequin's Kiss =========================-->
+	<ThingDef ParentName="OGXBaseMeleeWeapon_Sharp_Quality">
+		<defName>Melee_HarlequinsKiss</defName>
+		<label>Elder Harlequin's Kiss</label>
+		<description>A Harlequin's Kiss (called the brathu-angau in the Eldar Lexicon, literally "kiss of doom"), also sometimes called a Sting, is one of the more horrifying close combat weapons employed by the Eldar, and is used only by Harlequins. Arguably the most iconic weapon that the masques carry to war, the Harlequin's Kiss is horrifically lethal. This weapon consists of a sharpened tube containing high-tensile monofilament wire, like those used in the Death Spinners, and is worn on the forearm. The Kiss is only effective in close combat. It contains a tightly-coiled retractable monofilament wire which is around 100 metres in length. When activated, usually by a forward punching motion, the wire is violently released. Capable of piercing armour, if the wire penetrates its victim it instantly uncoils and lashes around violently, liquefying bones and internal organs, and causing immediate death in a spectacular and bloody fashion. The wire then retracts back into the Kiss for another use.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/HarlequinsKiss</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<soundInteract>Interact_Revolver</soundInteract>
+		<costStuffCount>400</costStuffCount>
+		<statBases>
+			<WorkToMake>27500</WorkToMake>
+			<Mass>0.5</Mass>
+			<MarketValue>7500</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MeleeHitChance>0.25</MeleeHitChance>
+			<PsychicSensitivity>0.15</PsychicSensitivity>
+			<MoveSpeed>0.25</MoveSpeed>
+		</equippedStatOffsets>
+		<equippedAngleOffset>-25</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.0</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Cut</li>
+					<li>Stab</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>1.4</cooldownTime>
+			</li>
+			<li>
+				<label>sting</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>200</power>
+				<cooldownTime>30</cooldownTime>
+			</li>
+		</tools>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<recipeMaker>
+			<recipeUsers>
+			
+			</recipeUsers>
+		<researchPrerequisite>EldarAdvancedMelee</researchPrerequisite>
+		</recipeMaker>
+		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Plasteel>2</Plasteel>
+			<Steel>10</Steel>
+		</costList>
+		<weaponTags>
+			<li>EHarlequinsKiss</li>
+			<li>ESpecialMelee</li>
+			<li>EArmoury</li>
+		</weaponTags>
+		<thingCategories>
+			<li>OGEMelee</li>
+		</thingCategories>
+		<tradeTags>
+			<li>OGEMelee</li>
+		</tradeTags>
+	 </ThingDef>
+	
+ 	<!--==================== Eldar  - Singing Spear =========================--> 
+	<ThingDef ParentName="BaseProjectileNeolithic">
     <defName>SingingSpear_Thrown</defName>
     <label>Singing Spear</label>
     <graphicData>
@@ -653,7 +626,7 @@
       <damageAmountBase>30</damageAmountBase>
       <speed>26</speed>
     </projectile>
-  </ThingDef>
+	</ThingDef>
   
   <ThingDef ParentName="OGBaseGun">
     <defName>Melee_SingingSpear</defName>
@@ -668,45 +641,35 @@
 	<statBases>
 		<WorkToMake>27500</WorkToMake>
 		<Mass>2.5</Mass>
-		<Weapon_Bulk>2.25</Weapon_Bulk>
+		
 		<MarketValue>4250</MarketValue>
 		<AccuracyTouch>0.91</AccuracyTouch>
 		<AccuracyShort>0.81</AccuracyShort>
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.75</AccuracyLong>
 		<RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
-		<Weapon_Bulk>1.0</Weapon_Bulk>
+		
     </statBases>
     <verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
+				<targetable>true</targetable>
+				<onlyManualCast>true</onlyManualCast>
 			<defaultProjectile>SingingSpear_Thrown</defaultProjectile>
 			<warmupTime>4.0</warmupTime>
 			<range>20</range>
 			<soundCast>Interact_BeatFire</soundCast>
-		</li>    
-		<li>
-			<verbClass>Verb_MeleeAttack</verbClass>
-			<hasStandardCommand>true</hasStandardCommand>
-			<meleeDamageDef>OGIPowerWeapon</meleeDamageDef>
-		</li>
+		</li> 
     </verbs>
     <tools>
       <li>
-        <label>shaft</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>10</power>
-        <cooldownTime>1.6</cooldownTime>
-      </li>
-      <li>
         <label>point</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
         </capacities>
         <power>30</power>
+				<armorPenetration>1</armorPenetration>
         <cooldownTime>1.6</cooldownTime>
       </li>
 		<li>
@@ -715,11 +678,21 @@
 					<li>Cut</li>
 				</capacities>
 				<power>30</power>
+				<armorPenetration>1</armorPenetration>
 				<cooldownTime>1.7</cooldownTime>
 			</li>
     </tools>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<recipeMaker>
+			<recipeUsers>
+			
+			</recipeUsers>
+		<researchPrerequisite>EldarAdvancedMelee</researchPrerequisite>
+		</recipeMaker>
 		<costList>				<!-- USED TO CONTROL WHAT IS GIVEN WHEN ITEM IS SMELTED TIER 1-->
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<Plasteel>2</Plasteel>
 			<Steel>10</Steel>
 		</costList>

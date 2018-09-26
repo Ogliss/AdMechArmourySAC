@@ -16,8 +16,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>100.0</max>
+					<min>15.0</min>        
+					<max>25.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -41,8 +41,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>75.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -66,8 +66,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>75.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -93,8 +93,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>75.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -118,8 +118,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>75.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -144,8 +144,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>75.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -171,8 +171,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>100.0</max>
+					<min>15.0</min>        
+					<max>25.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -198,8 +198,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>100.0</max>
+					<min>15.0</min>        
+					<max>35.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -225,8 +225,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>66.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -252,8 +252,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>66.0</max>
+					<min>20.0</min>        
+					<max>25.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -279,8 +279,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>66.0</max>
+					<min>25.0</min>        
+					<max>35.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -306,8 +306,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>66.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -333,8 +333,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>66.0</max>
+					<min>15.0</min>        
+					<max>25.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -360,8 +360,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>66.0</max>
+					<min>15.0</min>        
+					<max>25.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -387,8 +387,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>66.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -414,8 +414,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>66.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -441,8 +441,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>66.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        
@@ -469,8 +469,8 @@
 					</li>
 				</grains>      
 				<volumeRange>
-					<min>55.0</min>        
-					<max>66.0</max>
+					<min>35.0</min>        
+					<max>45.0</max>
 				</volumeRange>      
 				<pitchRange>
 					<min>0.9</min>        

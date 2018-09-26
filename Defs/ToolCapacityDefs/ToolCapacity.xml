@@ -3,6 +3,12 @@
 <Defs>
   <ToolCapacityDef>
     <defName>ThunderBlunt</defName>
-    <label>Thunderhammer</label>
+    <label>Thunderhammer smash</label>
   </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+    <defName>PowerMaul</defName>
+    <label>Power weapon Maul</label>
+  </ToolCapacityDef>
+  
 </Defs>

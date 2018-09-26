@@ -30,7 +30,7 @@
 				</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">				<!-- THIS DOES Medicine -->
-				<thingDef>Medicine</thingDef>
+				<thingDef>MedicineIndustrial</thingDef>
 				<price>Expensive</price>
 				<countRange>
 					<min>5</min>
@@ -38,7 +38,7 @@
 				</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
-				<thingDef>GlitterworldMedicine</thingDef>		<!-- THIS DOES GLITTER MEDS -->
+				<thingDef>MedicineUltratech</thingDef>		<!-- THIS DOES GLITTER MEDS -->
 				<price>Expensive</price>
 				<countRange>
 					<min>-3</min>
