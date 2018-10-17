@@ -88,7 +88,7 @@
 		<label>plasma</label>
 		<deathMessage>{0} has been given the Emperors Justice.</deathMessage>
 		<defaultDamage>0</defaultDamage>
-		<explosionBuildingDamageFactor>1</explosionBuildingDamageFactor>
+		<buildingDamageFactor>1</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastDry</explosionCellMote>
@@ -103,7 +103,7 @@
 		<label>plasma cannon</label>
 		<deathMessage>{0} has been given the Emperors Justice.</deathMessage>
 		<defaultDamage>45</defaultDamage>
-		<explosionBuildingDamageFactor>1</explosionBuildingDamageFactor>
+		<buildingDamageFactor>1</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastDry</explosionCellMote>
@@ -118,7 +118,7 @@
 		<label>melta</label>
 		<deathMessage>{0} has been given the Emperors Justice.</deathMessage>
 		<defaultDamage>10</defaultDamage>
-		<explosionBuildingDamageFactor>5</explosionBuildingDamageFactor>
+		<buildingDamageFactor>10</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>50</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastFlame</explosionCellMote>
@@ -135,7 +135,7 @@
 		<deathMessage>{0} has been given the Emperors Justice.</deathMessage>
 		
 		<defaultDamage>25</defaultDamage>
-		<explosionBuildingDamageFactor>3</explosionBuildingDamageFactor>
+		<buildingDamageFactor>3</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastDry</explosionCellMote>
@@ -158,7 +158,7 @@
 		<armorCategory>Sharp</armorCategory>
 		
 		<defaultDamage>25</defaultDamage>
-		<explosionBuildingDamageFactor>1</explosionBuildingDamageFactor>
+		<buildingDamageFactor>1</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastDry</explosionCellMote>
@@ -207,7 +207,7 @@
 		<armorCategory>Blunt</armorCategory>
 		
 		<defaultDamage>25</defaultDamage>
-		<explosionBuildingDamageFactor>1</explosionBuildingDamageFactor>
+		<buildingDamageFactor>1</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastDry</explosionCellMote>
@@ -230,7 +230,7 @@
 		<armorCategory>Blunt</armorCategory>
 		
 		<defaultDamage>25</defaultDamage>
-		<explosionBuildingDamageFactor>1</explosionBuildingDamageFactor>
+		<buildingDamageFactor>1</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastDry</explosionCellMote>
@@ -271,7 +271,7 @@
 		<armorCategory>Sharp</armorCategory>
 		
 		<defaultDamage>25</defaultDamage>
-		<explosionBuildingDamageFactor>1</explosionBuildingDamageFactor>
+		<buildingDamageFactor>1</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastDry</explosionCellMote>
@@ -412,7 +412,7 @@
 		<impactSoundType>Bullet</impactSoundType>
 		<armorCategory>Sharp</armorCategory>
 		<defaultDamage>0</defaultDamage>
-		<explosionBuildingDamageFactor>0</explosionBuildingDamageFactor>
+		<buildingDamageFactor>0</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastEMP</explosionCellMote>
@@ -436,7 +436,7 @@
 		<armorCategory>Heat</armorCategory>
 		
 		<defaultDamage>25</defaultDamage>
-		<explosionBuildingDamageFactor>3</explosionBuildingDamageFactor>
+		<buildingDamageFactor>3</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastDry</explosionCellMote>
@@ -516,7 +516,7 @@
 		<impactSoundType>Bullet</impactSoundType>
 		<armorCategory>Sharp</armorCategory>
 		<defaultDamage>0</defaultDamage>
-		<explosionBuildingDamageFactor>0</explosionBuildingDamageFactor>
+		<buildingDamageFactor>0</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastEMP</explosionCellMote>
@@ -540,7 +540,7 @@
 		<armorCategory>Heat</armorCategory>
 		
 		<defaultDamage>25</defaultDamage>
-		<explosionBuildingDamageFactor>3</explosionBuildingDamageFactor>
+		<buildingDamageFactor>3</buildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastDry</explosionCellMote>

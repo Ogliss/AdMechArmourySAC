@@ -213,7 +213,6 @@
 		<deathMessage>{0} was slain by a force strike.</deathMessage>
 		<armorCategory>Heat</armorCategory>
 		<defaultDamage>10</defaultDamage>
-		<explosionBuildingDamageFactor>0</explosionBuildingDamageFactor>
 		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
 		<explosionCellMote>Mote_BlastEMP</explosionCellMote>
