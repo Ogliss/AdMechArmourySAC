@@ -5,7 +5,7 @@
 
 	<ResearchProjectDef>
 		<tab>OGAMA_RTab</tab>
-		<defName>ImperialWeapons</defName>
+		<defName>ImperialTechBase</defName>
 		<label>Imperial Weapons</label>
 		<description>Allows you to Research basic Imperial Weapons</description>
 		<baseCost>2000</baseCost>
@@ -15,7 +15,7 @@
 		<techLevel>Industrial</techLevel>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>0</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewY>0.5</researchViewY>
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef>
@@ -25,12 +25,12 @@
 		<description>Allows you to create basic Power Weapons</description>
 		<baseCost>2000</baseCost>
 		<prerequisites>
-			<li>ImperialWeapons</li>
+			<li>ImperialTechBase</li>
 		</prerequisites>
 		<techLevel>Industrial</techLevel>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0.75</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>	
 	
 	<ResearchProjectDef>
@@ -40,91 +40,14 @@
 		<description>Allows you to create Conversion Field emitters</description>
 		<baseCost>2000</baseCost>
 		<prerequisites>
-			<li>ImperialWeapons</li>
+			<li>ImperialTechBase</li>
 		</prerequisites>
 		<techLevel>Industrial</techLevel>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0</researchViewX>
-		<researchViewY>1</researchViewY>
-	</ResearchProjectDef>
-	
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Imperium Weapons =========================OG-->
-	
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Las Weapons =========================OG-->
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRLasPistol</defName>
-		<label>Las Pistol</label>
-		<description>Teaches Imperial subjects how to create a Las Pistol</description>
-		<baseCost>1000</baseCost>
-		<prerequisites>
-			<li>ImperialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>0</researchViewX>
-		<researchViewY>0.5</researchViewY>
-	</ResearchProjectDef>
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRLasGun</defName>
-		<label>Las Gun</label>
-		<description>Teaches Imperial subjects how to create a Las Gun</description>
-		<baseCost>1500</baseCost>
-		<prerequisites>
-			<li>WRLasPistol</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>0.75</researchViewX>
-		<researchViewY>0.5</researchViewY>
-	</ResearchProjectDef>
-	
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Bolt Weapons =========================OG-->
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRBoltPistol</defName>
-		<label>Bolt Pistol</label>
-		<description>Teaches Imperial subjects how to create a Bolt Pistol</description>
-		<baseCost>1000</baseCost>
-		<prerequisites>
-			<li>ImperialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>0</researchViewX>
+		<researchViewX>1</researchViewX>
 		<researchViewY>1.5</researchViewY>
 	</ResearchProjectDef>
 	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRBoltGun</defName>
-		<label>Bolt Gun</label>
-		<description>Teaches Imperial subjects how to create a Bolt Gun</description>
-		<baseCost>1500</baseCost>
-		<prerequisites>
-			<li>WRBoltPistol</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>0.75</researchViewX>
-		<researchViewY>1.5</researchViewY>
-	</ResearchProjectDef>
 	
 		<!--OG==================== Adeptus Mechanicus Armoury Mod - Research Imperial Special Weapons =========================OG-->
 
@@ -135,12 +58,12 @@
 		<description>Allows you to Research Special Imperial Weapons</description>
 		<baseCost>2000</baseCost>
 		<prerequisites>
-			<li>ImperialWeapons</li>
+			<li>ImperialTechBase</li>
 		</prerequisites>
 		<techLevel>Industrial</techLevel>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>3</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0.5</researchViewY>
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef>
@@ -155,203 +78,10 @@
 		</prerequisites>
 		<techLevel>Industrial</techLevel>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>1.5</researchViewX>
-		<researchViewY>0</researchViewY>
-	</ResearchProjectDef>
-
-	
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Imperium Special Weapons =========================OG-->
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Plasma Weapons =========================OG-->
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRPlasmaPistol</defName>
-		<label>Plasma Pistol</label>
-		<description>Teaches Imperial subjects how to create a Plasma Pistol</description>
-		<baseCost>1000</baseCost>
-		<prerequisites>
-			<li>ImperialSpecialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>0</researchViewX>
-		<researchViewY>2.0</researchViewY>
-	</ResearchProjectDef>
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRPlasmaGun</defName>
-		<label>Plasma Gun</label>
-		<description>Teaches Imperial subjects how to create a Plasma Gun</description>
-		<baseCost>1500</baseCost>
-		<prerequisites>
-			<li>WRPlasmaPistol</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>0.75</researchViewX>
-		<researchViewY>2.0</researchViewY>
-	</ResearchProjectDef>
-	
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Special Bolt Weapons =========================OG-->
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRStormBolter</defName>
-		<label>Storm Bolter</label>
-		<description>Teaches Imperial subjects how to create a Storm Bolter</description>
-		<baseCost>3000</baseCost>
-		<prerequisites>
-			<li>WRBoltGun</li>
-			<li>ImperialSpecialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>1.5</researchViewX>
+		<researchViewX>1.75</researchViewX>
 		<researchViewY>1.5</researchViewY>
 	</ResearchProjectDef>
 	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRStalkerBolter</defName>
-		<label>Stalker Pattern Bolter</label>
-		<description>Teaches Imperial subjects how to create a Stalker Pattern Bolter</description>
-		<baseCost>1500</baseCost>
-		<prerequisites>
-			<li>WRBoltGun</li>
-			<li>ImperialSpecialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>2.25</researchViewX>
-		<researchViewY>1</researchViewY>
-	</ResearchProjectDef>
-	
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Special Weapons =========================OG-->
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRFlamer</defName>
-		<label>Flamer</label>
-		<description>Teaches Imperial subjects how to create a basic Flamer</description>
-		<baseCost>1500</baseCost>
-		<prerequisites>
-			<li>ImperialSpecialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>3.0</researchViewX>
-		<researchViewY>0.5</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRMetla</defName>
-		<label>Melta</label>
-		<description>Teaches Imperial subjects how to create a basic Meltagun</description>
-		<baseCost>4000</baseCost>
-		<prerequisites>
-			<li>WRFlamer</li>
-			<li>ImperialSpecialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>3.0</researchViewX>
-		<researchViewY>1</researchViewY>
-	</ResearchProjectDef>
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRRipperGun</defName>
-		<label>Ogryn Ripper Gun</label>
-		<description>Teaches Imperial subjects how to create an Ogryn Ripper Gun</description>
-		<baseCost>1500</baseCost>
-		<prerequisites>
-			<li>ImperialSpecialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>3.0</researchViewX>
-		<researchViewY>1.5</researchViewY>
-	</ResearchProjectDef>
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRGrenadeGauntlet</defName>
-		<label>Ogryn Grenadier Gauntlet</label>
-		<description>Teaches Imperial subjects how to create a Grenadier Gauntlet</description>
-		<baseCost>4000</baseCost>
-		<prerequisites>
-			<li>ImperialSpecialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>3</researchViewX>
-		<researchViewY>2</researchViewY>
-	</ResearchProjectDef>
-	
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Special Las Weapons =========================OG-->
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRLongLas</defName>
-		<label>Long-Las</label>
-		<description>Teaches Imperial subjects how to create a modified "Long-Las" Lasgun</description>
-		<baseCost>4000</baseCost>
-		<prerequisites>
-			<li>WRLasGun</li>
-			<li>ImperialSpecialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>1.5</researchViewX>
-		<researchViewY>1</researchViewY>
-	</ResearchProjectDef>
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRHellgun</defName>
-		<label>Hellgun</label>
-		<description>Teaches Imperial subjects how to create a modified "Hellgun" Lasgun</description>
-		<baseCost>4000</baseCost>
-		<prerequisites>
-			<li>WRLasGun</li>
-			<li>ImperialSpecialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>1.5</researchViewX>
-		<researchViewY>0.5</researchViewY>
-	</ResearchProjectDef>
-
-
 	<!--OG==================== Adeptus Mechanicus Armoury Mod - Research Imperial Heavy Weapons =========================OG-->
 
 	<ResearchProjectDef>
@@ -365,8 +95,8 @@
 		</prerequisites>
 		<techLevel>Industrial</techLevel>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>3.75</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewX>2.5</researchViewX>
+		<researchViewY>0.5</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -381,264 +111,66 @@
 		</prerequisites>
 		<techLevel>Industrial</techLevel>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>2.25</researchViewX>
-		<researchViewY>0</researchViewY>
-	</ResearchProjectDef>
-
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Imperium Heavy Weapons =========================OG-->	
-
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRAssaultCannon</defName>
-		<label>Assaultcannon</label>
-		<description>Teaches Imperial subjects how to create an Assaultcannon</description>
-		<baseCost>1000</baseCost>
-		<prerequisites>
-			<li>ImperialHeavyWeapons</li>
-			<li>MultibarrelWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>3.75</researchViewX>
-		<researchViewY>1</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRAutoCannon</defName>
-		<label>Autocannon</label>
-		<description>Teaches Imperial subjects how to create an Autocannon</description>
-		<baseCost>1500</baseCost>
-		<prerequisites>
-			<li>ImperialHeavyWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>3.75</researchViewX>
-		<researchViewY>0.5</researchViewY>
-	</ResearchProjectDef>
-
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Heavy Las Weapons =========================OG-->	
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRLasCannon</defName>
-		<label>LasCannon</label>
-		<description>Teaches Imperial subjects how to create a LasCannon</description>
-		<baseCost>1500</baseCost>
-		<prerequisites>
-			<li>WRHellgun</li>
-			<li>ImperialHeavyWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>2.25</researchViewX>
-		<researchViewY>0.5</researchViewY>
-	</ResearchProjectDef>
-
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Heavy Bolt Weapons =========================OG-->
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRHeavyBolter</defName>
-		<label>Heavy Bolter</label>
-		<description>Teaches Imperial subjects how to create a Heavy Bolter</description>
-		<baseCost>2000</baseCost>
-		<prerequisites>
-			<li>WRStormBolter</li>
-			<li>ImperialHeavyWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>2.25</researchViewX>
+		<researchViewX>3.5</researchViewX>
 		<researchViewY>1.5</researchViewY>
 	</ResearchProjectDef>
-
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Heavy Plasma Weapons =========================OG-->
-	
+	<!--OG==================== Adeptus Mechanicus Armoury Mod - Imperium Weapons Tech =========================OG-->
+	<!--OG==================== Adeptus Mechanicus Armoury Mod - Las Weapons =========================OG-->
 	<ResearchProjectDef>
 		<tab>OGAMA_RTab</tab>
-		<defName>WRPlasmaCannon</defName>
-		<label>Plasma Cannon</label>
-		<description>Teaches Imperial subjects how to create a Plasma Cannon</description>
-		<baseCost>3000</baseCost>
+		<defName>WRImpLasTech</defName>
+		<label>Laser Tech</label>
+		<description>Teaches Imperial subjects how to create a Las Pistol</description>
+		<baseCost>1000</baseCost>
 		<prerequisites>
-			<li>WRPlasmaGun</li>
-			<li>ImperialHeavyWeapons</li>
+			<li>ImperialTechBase</li>
 		</prerequisites>
 		<techLevel>Industrial</techLevel>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
-		<researchViewX>1.5</researchViewX>
-		<researchViewY>2.0</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>2.5</researchViewY>
 	</ResearchProjectDef>
+	<!--OG==================== Adeptus Mechanicus Armoury Mod - Bolt Weapons =========================OG-->
 	
-	<!--OG==================== Adeptus Mechanicus Armoury Mod - Mechanicus Weapons =========================OG-->
+	<ResearchProjectDef>
+		<tab>OGAMA_RTab</tab>
+		<defName>WRImpBoltTech</defName>
+		<label>Bolter weapons tech</label>
+		<description>Teaches Imperial subjects how to create a Bolt Pistol</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>ImperialTechBase</li>
+		</prerequisites>
+		<techLevel>Industrial</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>1</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef> 
+		<!--OG==================== Adeptus Mechanicus Armoury Mod - Plasma Weapons =========================OG-->
+	<ResearchProjectDef>
+		<tab>OGAMA_RTab</tab>
+		<defName>WRImpPlasmaTech</defName>
+		<label>Plasma weapons</label>
+		<description>Teaches Imperial subjects how to create a Plasma Pistol</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>ImperialSpecialWeapons</li>
+		</prerequisites>
+		<techLevel>Industrial</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>1.75</researchViewX>
+		<researchViewY>1.0</researchViewY>
+	</ResearchProjectDef>
 
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>ImperialMechanicusWeapons</defName>
-		<label>Mechanicus Weapons</label>
-		<description>Allows you to create Mechanicus Weapons</description>
-		<baseCost>4000</baseCost>
-		<prerequisites>
-			<li>ImperialWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0</researchViewX>
-		<researchViewY>2.5</researchViewY>
-	</ResearchProjectDef>
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRRadiumPistol</defName>
-		<label>Radium Pistol</label>
-		<description>Teaches Imperial subjects how to create a Radium Pistol</description>
-		<baseCost>1500</baseCost>
-		<prerequisites>
-			<li>ImperialMechanicusWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0.0</researchViewX>
-		<researchViewY>3</researchViewY>
-	</ResearchProjectDef>
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRRadiumCarbine</defName>
-		<label>Radium Carbine</label>
-		<description>Teaches Imperial subjects how to create a Radium Carbine</description>
-		<baseCost>2000</baseCost>
-		<prerequisites>
-			<li>WRRadiumPistol</li>
-			<li>ImperialMechanicusWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0.75</researchViewX>
-		<researchViewY>3</researchViewY>
-	</ResearchProjectDef>
-	
-	<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRRadiumJezzail</defName>
-		<label>Radium Jezzail</label>
-		<description>Teaches Imperial subjects how to create a Radium Jezzail</description>
-		<baseCost>2500</baseCost>
-		<prerequisites>
-			<li>WRRadiumCarbine</li>
-			<li>ImperialMechanicusWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>1.5</researchViewX>
-		<researchViewY>3</researchViewY>
-	</ResearchProjectDef>
-	
-		<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRMacroStubber</defName>
-		<label>Macro Stubber</label>
-		<description>Teaches Imperial subjects how to create a Macro Stubber</description>
-		<baseCost>2000</baseCost>
-		<prerequisites>
-			<li>ImperialMechanicusWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0</researchViewX>
-		<researchViewY>3.5</researchViewY>
-	</ResearchProjectDef>
-	
-		<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRStubCarbine</defName>
-		<label>Stub Carbine</label>
-		<description>Teaches Imperial subjects how to create a Stub Carbine</description>
-		<baseCost>2500</baseCost>
-		<prerequisites>
-			<li>WRMacroStubber</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0.75</researchViewX>
-		<researchViewY>3.5</researchViewY>
-	</ResearchProjectDef>
-	
-		<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRPlasmaCaliver</defName>
-		<label>Plasma Caliver</label>
-		<description>Teaches Imperial subjects how to create a Plasma Caliver</description>
-		<baseCost>3000</baseCost>
-		<prerequisites>
-			<li>WRPlasmaGun</li>
-			<li>ImperialMechanicusWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0.75</researchViewX>
-		<researchViewY>2.5</researchViewY>
-	</ResearchProjectDef>
-	
-		<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRPlasmaCulverin</defName>
-		<label>Plasma Culverin</label>
-		<description>Teaches Imperial subjects how to create a Plasma Culverin</description>
-		<baseCost>4000</baseCost>
-		<prerequisites>
-			<li>WRPlasmaCannon</li>
-			<li>WRPlasmaCaliver</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>1.5</researchViewX>
-		<researchViewY>2.5</researchViewY>
-	</ResearchProjectDef>
-	
-		<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRGalvanicRifle</defName>
-		<label>Galvanic Rifle</label>
-		<description>Teaches Imperial subjects how to create a Galvanic Rifle</description>
-		<baseCost>2500</baseCost>
-		<prerequisites>
-			<li>ImperialMechanicusWeapons</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>2.25</researchViewX>
-		<researchViewY>3</researchViewY>
-	</ResearchProjectDef>
-	
-		<ResearchProjectDef>
-		<tab>OGAMA_RTab</tab>
-		<defName>WRTransuranicArquebus</defName>
-		<label>Transuranic Arquebus</label>
-		<description>Teaches Imperial subjects how to create a Transuranic Arquebus</description>
-		<baseCost>3000</baseCost>
-		<prerequisites>
-			<li>WRGalvanicRifle</li>
-		</prerequisites>
-		<techLevel>Industrial</techLevel>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>3.0</researchViewX>
-		<researchViewY>3</researchViewY>
-	</ResearchProjectDef>
 	<!--OG==================== Adeptus Mechanicus Armoury Mod - Servo Skulls =========================OG-->
 
 	<ResearchProjectDef>
@@ -652,8 +184,8 @@
 		</prerequisites>
 		<techLevel>Industrial</techLevel>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0.75</researchViewX>
-		<researchViewY>1</researchViewY>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>

@@ -105,7 +105,7 @@
       <li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>OGI_Bullet_StormBolter</defaultProjectile>
+			<defaultProjectile>OGI_Bullet_BoltSml</defaultProjectile>
 			<warmupTime>0.30</warmupTime>
 			<range>31</range>
 			<forcedMissRadius>0.5</forcedMissRadius>

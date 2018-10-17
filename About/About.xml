@@ -2,12 +2,10 @@
 <ModMetaData>
 	<name>Adeptus Mechanicus: Armoury Standalone B19</name>
 	<author>Ogliss</author>
-	<targetVersion>0.19.0</targetVersion>
-	<description>V1.01
-    Same as 
-http://steamcommunity.com/sharedfiles/filedetails/?id=1288096579
+	<targetVersion>0.19.2009</targetVersion>
+	<description>V1.19
 
-with No prerequisite mods
+	No prerequisite mods
 
 This mod adds several weapons, from the warhammer 40k universe, designed as an enhancement to and inspired by QuantumX's Astra Militarum Mod
 
@@ -35,116 +33,30 @@ The Eldar Wraithcannon is a unique weapon that has a chance to totally destroy i
 Baleful Energies:
 Necron weaponry utilizes dangerous and baleful energies which have negative effects on living tissue, making using this technology hazardous to living beings, however they do have a chance of ignoring all armour
 
-Wargear
-Imperial
+Rapid Fire: Rapid fire weapons have an increased Rate of fire (shots per burst) when firing at targets are within half of their max range.
 
-Shields - Shield code based on Polaris Labs Core
-Rosarius - Low capacity high recharge rate
-Iron Halo - High capacity low recharge rate
+Contains
 
-Purity Seal:
-slight Psyhic and mental break resistance
-
-Servo Skulls (Hospitaller, Inquisitorial, Mechanicus)
-
-Weapony
-Imperial
-
-Bolt Pistol
-Storm Bolter
-Stalker Pattern Bolter
-Heavy Bolter
-Plasma Pistol (Gets Hot)
-Plasma Gun (Gets Hot)
-Plasma Cannon (Gets Hot)
-Autocannon
-Assaultcannon (Jams)
-Heavy Stubber
-Long-Las
-Hellgun
-Lascannon 
-Flamer
-Melta 
-Ogryn Ripper Gun
-Ogryn Grenadier Gauntlet
-
-Chainsword
-Eviscerator
-Power Sword (Power Weapon)
-Power Maul (Power Weapon, Pacifier)
-Power Fist (Heavy Power Weapon)
-Lightning Claw (Single and Dual, fast Power Weapon)
-Force Staff (Heavy Slow Power Weapon)
-Thunder Hammer (Heavy Slow Power Weapon)
-
-Mechanicus
-Radium Pistol (Irradiated)
-Radium Rifle (Irradiated)
-Radium Jezzail (Irradiated)
-Plasma Caliver (Gets Hot)
-Plasma Culverin (Gets Hot)
-Macro Stubber
-Stubcarbine
-Galvanic Rifle
-Transuranic arquebus
-
-Traitor/Chaos
-
-Reaper Autocannon
-Sonic Blaster - (no sounds yet)
-Blastmaser - (no sounds yet)
-
-Tau Empire
-Tau weapons all give a minor accuracy debuff and lower the psychic sensitivity of the wielder
-Pulse Carbine
-Pulse Rifle
-Kroot Rifle
-Rail Rifle
-Ion Rifle
-Burst Cannon
-Neutron Blaster
-
-Honor Blade
-
-Craftworld Eldar
-Eldar weapons all give a minor accuracy and movespeed buff, but increase the psychic sensitivty of the wielder 
-Shuriken Pistol
-Shuriken Catapult
-Ranger Longrifle
-Deathspinner
-Fusion Gun
-Wraithcannon (Warprift)
-Starcannon
-Brightlance
-
-Scorpion Chainsword
-Power sword (Power Weapon)
-Witchblade (Power Weapon)
-Singing Spear (Power Weapon, Ranged attack)
-Executioner (Heavy Power Weapon)
-Ghost Sword (Single and dual)
-Ghost Axe
-Harlequins Kiss (be careful about anyone armed with this)
-
-Ork - no customs sounds yet
-
-Slugga
-Shoota
-Twinlinked Shoota
-Big Shoota
-Snazzgun
-Zapp Kannon
-Plasma Deffgun
-
-Choppa
-Big Choppa
-Power Klaw (Heavy Power Weapon)
-
-Necron - No sounds yet - maybe a little OP
-
-Gauss Flayer (Baleful Energies)
-Guass Blaster (Baleful Energies)
-Gauss Cannon (Baleful Energies)
-Staff of Light (Baleful Energies)
+Imperial Weapony
+	23 guns
+	10 melee
+Mechanicus Weapony
+	11 guns
+	5 melee
+Chaos Weapony
+	12 guns
+	4 melee
+Eldar Weapony
+	11 guns
+	13 melee
+Dark Eldar Weapony
+	13 guns
+	8 melee
+Tau Weapony
+	7 guns
+	1 melee
+Ork Weapony
+	7 guns
+	5 melee
 		</description>
 </ModMetaData>
